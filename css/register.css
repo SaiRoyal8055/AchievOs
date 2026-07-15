@@ -1,0 +1,1220 @@
+/*=====================================================
+        NEXUSAI REGISTER.CSS
+        PART 3A
+======================================================*/
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*==========================
+        VARIABLES
+==========================*/
+
+:root{
+
+    --bg:#070B14;
+
+    --bg2:#0E1525;
+
+    --panel:rgba(255,255,255,.05);
+
+    --panel2:rgba(255,255,255,.08);
+
+    --primary:#7C3AED;
+
+    --secondary:#4F46E5;
+
+    --accent:#A855F7;
+
+    --blue:#3B82F6;
+
+    --text:#ffffff;
+
+    --muted:#A1A8C3;
+
+    --line:rgba(255,255,255,.08);
+
+    --shadow:0 20px 60px rgba(0,0,0,.35);
+
+}
+
+
+.lm {
+  --bg: #fafafe;
+  --bg2: #8fdfff33;
+  --bg3: #89a0ad27;
+  --sf: #fff;
+  --bd: rgba(99, 71, 246, 0.1);
+  --bd2: rgba(99, 71, 246, 0.2);
+  --tx: #0f0f1a;
+  --tx2: #94b7ceb2;
+  --tx3: #7878a0;
+}
+
+
+
+/*==========================
+        RESET
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    background:linear-gradient(180deg,#ffffff, #d2d6e0);
+
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+
+/*==========================
+        LINKS
+==========================*/
+
+a{
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+a:hover{
+
+    color:var(--accent);
+
+}
+
+
+/*=========================   NAVBAR   ==========================*/
+
+.logo-i {
+  width: 95px;
+  height: 100px;
+  background: var(--nav);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #201b55;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.navbar{
+
+    background:rgba(8,10,20,.85);
+
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+    transition:.4s;
+
+    z-index:999;
+
+}
+
+.navbar-brand{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+.nav-link{
+
+    color:#d7dcf4 !important;
+
+    margin-left:20px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#fff !important;
+
+}
+
+
+/*==========================
+        HERO
+==========================*/
+
+.register-hero{
+
+    padding-top:140px;
+
+    padding-bottom:70px;
+
+    position:relative;
+
+    overflow:hidden;
+
+     background:
+
+    radial-gradient(circle at top left,var(--bg2),transparent),
+
+    radial-gradient(circle at bottom right,var(--bg3),transparent),
+
+    var(--bg);
+
+}
+
+.register-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,var(--primary),transparent 70%);
+
+    opacity:.18;
+
+    left:-180px;
+
+    top:-180px;
+
+}
+
+.register-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,#2563eb,transparent 70%);
+
+    opacity:.15;
+
+    right:-140px;
+
+    bottom:-140px;
+
+}
+
+.badge-register{
+
+    display:inline-block;
+
+    background:rgba(124,58,237,.15);
+
+    color:#b78cff;
+
+    border:1px solid rgba(124,58,237,.45);
+
+    padding:10px 22px;
+
+    border-radius:100px;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
+}
+
+.register-hero h1{
+
+    font-size:52px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+.register-hero p{
+
+    color:var(--muted);
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+
+/*==========================
+        WRAPPER
+==========================*/
+
+.register-wrapper{
+
+    padding-bottom:80px;
+
+}
+
+
+/*==========================
+        CARD
+==========================*/
+
+.registration-card{
+
+
+    backdrop-filter:blur(18px);
+
+
+    border-radius:24px;
+
+    padding:45px;
+
+
+    position:relative;
+
+    overflow:hidden;
+
+     background:var(--sf);
+
+    border:1px solid var(--bd);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    
+}
+
+.registration-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    background:radial-gradient(circle,#7C3AED,transparent);
+
+    opacity:.15;
+
+    right:-120px;
+
+    top:-120px;
+
+}
+
+.registration-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    background:radial-gradient(circle,#3B82F6,transparent);
+
+    opacity:.12;
+
+    left:-120px;
+
+    bottom:-120px;
+
+}
+
+
+/*==========================
+        HEADER
+==========================*/
+
+.card-header-custom{
+
+    margin-bottom:35px;
+
+    text-align:center;
+
+}
+
+.card-header-custom h2{
+
+    color:var(--tx);
+    font-size:36px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.card-header-custom p{
+
+    color:var(--tx3);
+
+}
+
+
+/*==========================
+        FORM
+==========================*/
+
+.form-floating{
+
+    margin-bottom:5px;
+
+}
+
+.form-control,
+
+.form-select{
+
+        background:var(--bg);
+
+    color:var(--tx);
+
+    border:1px solid var(--bd2);
+
+    border-radius:14px;
+
+    min-height:58px;
+
+    transition:.35s;
+
+}
+
+.form-control:focus,
+
+.form-select:focus{
+
+   border-color:#6347f6;
+
+    background:var(--sf);
+
+    color:#fff;
+
+    box-shadow:0 0 0 .25rem rgba(124,58,237,.18);
+
+}
+
+.form-control::placeholder{
+
+    color:#98a4c9;
+
+}
+
+.form-floating>label{
+
+    color:var(--tx3);
+
+}
+
+.form-select option{
+
+    color:#111;
+
+}
+
+.form-label{
+
+    color:var(--bd2);
+
+    font-weight:600;
+
+}
+
+.gender-group{
+
+    display:flex;
+
+    gap:22px;
+
+    align-items:center;
+
+    margin-top:10px;
+
+}
+
+.form-check-input{
+
+    background:transparent;
+
+    border:1px solid rgba(255,255,255,.35);
+
+}
+
+.form-check-input:checked{
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+
+}
+
+
+/*==========================
+        SECTION TITLE
+==========================*/
+
+.section-title{
+
+    margin:25px 0 10px;
+
+}
+
+.section-title h4{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+
+/*==========================
+        TERMS
+==========================*/
+
+.terms-box{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    padding:18px 20px;
+
+    border-radius:14px;
+
+}
+
+.terms-box a{
+
+    color:#9f74ff;
+
+    font-weight:600;
+
+}
+
+.terms-box a:hover{
+
+    color:#fff;
+
+}
+
+
+/*==========================
+        BUTTONS
+==========================*/
+
+.btn{
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(135deg,#7C3AED,#4F46E5);
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 15px 30px rgba(124,58,237,.35);
+
+}
+
+.btn-success{
+
+    border:none;
+
+    background:linear-gradient(135deg,#10B981,#059669);
+
+}
+
+.btn-warning{
+
+    border:none;
+
+    background:linear-gradient(135deg,#F59E0B,#F97316);
+
+    color:#fff;
+
+}
+
+.register-btn{
+
+    margin-top:15px;
+
+    background:linear-gradient(135deg,#7C3AED,#2563EB);
+
+    color:#fff;
+
+    border:none;
+
+    padding:18px;
+
+    font-size:18px;
+
+    border-radius:16px;
+
+    transition:.4s;
+
+}
+
+.register-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 35px rgba(124,58,237,.45);
+
+}
+
+.register-btn i{
+
+    transition:.35s;
+
+}
+
+.register-btn:hover i{
+
+    transform:translateX(6px);
+
+}
+
+
+/*==========================
+        UTILITIES
+==========================*/
+
+.mt-4{
+
+    margin-top:2rem!important;
+
+}
+
+.text-muted{
+
+    color:var(--muted)!important;
+
+}
+
+
+
+
+/*=====================================================
+        NEXUSAI REGISTER.CSS
+        PART 3B
+======================================================*/
+
+
+/*=========================================
+        DESKTOP SIDE ADS
+=========================================*/
+
+.side-ads{
+
+    position:sticky;
+
+    top:100px;
+
+    height:calc(100vh - 120px);
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    background:var(--sf);
+
+    border:1px solid var(--bd);
+
+
+    padding:12px;
+
+}
+
+.ads-track{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    animation:scrollAds 28s linear infinite;
+
+}
+
+.side-ads:hover .ads-track{
+
+    animation-play-state:paused;
+
+}
+
+.ads-track img{
+
+    width:100%;
+
+    border-radius:16px;
+
+    display:block;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+}
+
+.ads-track img:hover{
+
+    transform:scale(1.04);
+
+}
+
+
+/*=========================================
+        MOBILE ADS
+=========================================*/
+
+.mobile-ads-top,
+
+.mobile-ads-bottom{
+
+    display:none;
+
+    overflow:hidden;
+
+    padding:15px 0;
+
+}
+
+.mobile-slider{
+
+    display:flex;
+
+    gap:15px;
+
+    animation:mobileSlide 22s linear infinite;
+
+    width:max-content;
+
+}
+
+.mobile-slider img{
+
+    width:320px;
+
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:16px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.30);
+
+}
+
+.mobile-slider:hover{
+
+    animation-play-state:paused;
+
+}
+
+
+/*=========================================
+        FOOTER
+=========================================*/
+
+.footer{
+
+    margin-top:80px;
+
+    padding:70px 0 30px;
+
+    background:var(--sf);
+
+    border-top:1px solid var(--bd);
+
+}
+
+.footer h3{
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.footer h5{
+
+    margin-bottom:18px;
+
+    font-weight:600;
+
+}
+
+.footer p
+.footer a{
+
+    color:var(--tx3);
+
+    line-height:1.8;
+
+}
+
+.footer-links{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.footer-links li{
+
+    margin-bottom:12px;
+
+}
+
+.footer-links a{
+
+    color:var(--muted);
+
+}
+
+.footer-links a:hover{
+
+    color:#fff;
+
+}
+
+.footer hr{
+
+    margin:40px 0 25px;
+
+    border-color:rgba(255,255,255,.08);
+
+}
+
+
+/*=========================================
+        SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0d1322;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#7C3AED;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#8B5CF6;
+
+}
+
+
+/*=========================================
+        INPUT HOVER
+=========================================*/
+
+.form-control:hover,
+
+.form-select:hover{
+
+    border-color:rgba(124,58,237,.45);
+
+}
+
+
+/*=========================================
+        CARD HOVER
+=========================================*/
+
+.registration-card{
+
+    transition:.45s;
+
+}
+
+.registration-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
+
+}
+
+
+/*=========================================
+        HERO ANIMATION
+=========================================*/
+
+.register-hero h1{
+
+    animation:fadeUp .8s ease;
+
+}
+
+.register-hero p{
+
+    animation:fadeUp 1s ease;
+
+}
+
+
+/*=========================================
+        FLOATING GLOW
+=========================================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:420px;
+
+    height:420px;
+
+    left:-160px;
+
+    top:20%;
+
+    border-radius:50%;
+
+    background:#7C3AED;
+
+    opacity:.08;
+
+    filter:blur(110px);
+
+    pointer-events:none;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:380px;
+
+    height:380px;
+
+    right:-120px;
+
+    bottom:8%;
+
+    border-radius:50%;
+
+    background:#2563EB;
+
+    opacity:.08;
+
+    filter:blur(110px);
+
+    pointer-events:none;
+
+}
+
+
+/*=========================================
+        ANIMATIONS
+=========================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes scrollAds{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-50%);
+
+    }
+
+}
+
+@keyframes mobileSlide{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+
+/*=========================================
+        TABLET
+=========================================*/
+
+@media(max-width:1199px){
+
+.side-ads{
+
+    display:none;
+
+}
+
+.registration-card{
+
+    padding:35px;
+
+}
+
+.mobile-ads-top,
+
+.mobile-ads-bottom{
+
+    display:block;
+
+}
+
+}
+
+
+/*=========================================
+        MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+.register-hero{
+
+    padding-top:110px;
+
+    padding-bottom:40px;
+
+}
+
+.register-hero h1{
+
+    font-size:34px;
+
+}
+
+.register-hero p{
+
+    font-size:15px;
+
+}
+
+.registration-card{
+
+    padding:24px;
+
+    border-radius:20px;
+
+}
+
+.gender-group{
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.card-header-custom h2{
+
+
+color:var(--tx);
+    font-size:28px;
+
+}
+
+.mobile-slider img{
+
+    width:280px;
+
+    height:140px;
+
+}
+
+.btn-lg{
+
+    margin-top:10px;
+
+}
+
+.form-control,
+
+.form-select{
+
+    min-height:54px;
+
+}
+
+}
+
+
+/*=========================================
+        SMALL MOBILE
+=========================================*/
+
+@media(max-width:480px){
+
+.registration-card{
+
+    padding:18px;
+
+}
+
+.mobile-slider img{
+
+    width:240px;
+
+    height:120px;
+
+}
+
+.badge-register{
+
+    font-size:13px;
+
+    padding:8px 16px;
+
+}
+
+.register-hero h1{
+
+    font-size:30px;
+
+}
+
+.register-btn{
+
+    font-size:16px;
+
+    padding:15px;
+
+}
+
+}
+
+
+/*=========================================
+        EXTRA EFFECTS
+=========================================*/
+
+.ads-track img,
+
+.mobile-slider img,
+
+.register-btn,
+
+.btn-primary,
+
+.btn-success,
+
+.btn-warning{
+
+    transition:all .35s ease;
+
+}
+
+.ads-track img:hover,
+
+.mobile-slider img:hover{
+
+    transform:translateY(-6px) scale(1.03);
+
+}
+
+.register-btn:hover{
+
+    letter-spacing:.5px;
+
+}
+
+
+/*=========================================
+        END OF FILE
+=========================================*/

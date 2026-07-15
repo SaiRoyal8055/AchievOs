@@ -1,0 +1,1135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AchievO Student Registration Form">
+  <meta name="author" content="AchievO">
+  <title>AchievO – Registration</title>
+
+  <link rel="icon" href="{{ url_for('static', filename='images/AchievO favicon.png') }}" type="image/png">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-icons.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="register-page">
+
+  <!-- Header Nav -->
+  <nav class="navbar navbar-expand-lg fixed-top register-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" width="100" alt="AchievO Logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('faqs') }}">FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <header class="site-header">
+    <marquee direction="left" scrollamount="6" class="promo-marquee">
+      🎉 APPLY PROMO CODE "ACHIEVO800" AND GET ₹800 OFF ON REGISTRATION FEE •
+      🎉 APPLY PROMO CODE "ACHIEVO800" AND GET ₹800 OFF ON REGISTRATION FEE •
+      🎉 APPLY PROMO CODE "ACHIEVO800" AND GET ₹800 OFF ON REGISTRATION FEE •
+    </marquee>
+  </header>
+
+  <main>
+    <div class="page">
+
+      <!-- Left Ad Column -->
+      <aside class="ads" aria-hidden="true">
+        <div class="ads-track">
+
+          <img src="{{ url_for('static', filename='images/college_ad_1.png') }}" alt="Advertisement">
+          <img src="{{ url_for('static', filename='images/college_ad_2.png') }}" alt="Advertisement">
+          <img src="{{ url_for('static', filename='images/college_ad_3.png') }}" alt="Advertisement">
+
+          <!-- Duplicate for seamless loop -->
+          <img src="{{ url_for('static', filename='images/college_ad_1.png') }}" alt="Advertisement">
+          <img src="{{ url_for('static', filename='images/college_ad_2.png') }}" alt="Advertisement">
+          <img src="{{ url_for('static', filename='images/college_ad_3.png') }}" alt="Advertisement">
+
+        </div>
+      </aside>
+
+      <!-- Main Form Content -->
+      <div class="container-fluid">
+        <div class="content">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+
+              <form action="/register" method="post" id="registrationForm" novalidate class="custom-form contact-form">
+
+                <div class="col-12 mb-4">
+                  <h3 class="pb-2">Registration Form</h3>
+                </div>
+
+                <div class="row g-3">
+
+                  <!-- Student Name -->
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="text" name="studentName" id="studentName" class="form-control"
+                        placeholder="Student Name" autocomplete="name" required>
+                      <label for="studentName">Student Name</label>
+                      <div class="invalid-feedback">Please enter student name.</div>
+                    </div>
+                  </div>
+
+                  <!-- Father / Guardian Name -->
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="text" name="fatherName" id="fatherName" class="form-control"
+                        placeholder="Father/Guardian Name" autocomplete="on" required>
+                      <label for="fatherName">Father / Guardian Name</label>
+                      <div class="invalid-feedback">Please enter father/guardian name.</div>
+                    </div>
+                  </div>
+
+                  <!-- Date of Birth -->
+                  <div class="col-lg-6 col-12">
+                    <div class="form-floating position-relative">
+                      <input type="text" name="dob" id="dob" class="form-control pe-5" placeholder="DD-MM-YYYY"
+                        autocomplete="on" required>
+                      <label for="dob">Date of Birth</label>
+                      <i class="bi bi-calendar-date-fill dob-icon"></i>
+                      <div class="invalid-feedback">
+                        Please select date of birth.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Gender -->
+                  <div class="col-lg-6 col-12 d-flex align-items-center gap-3" role="group"
+                    aria-labelledby="genderLabel">
+                    <span id="genderLabel" class="fw-semibold text-muted small">Gender:</span>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                      <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                      <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="other" value="Other">
+                      <label class="form-check-label" for="other">Other</label>
+                    </div>
+                  </div>
+
+                  <!-- Mobile Number -->
+                  <div class="col-lg-4 col-12">
+                    <div class="form-floating">
+                      <input type="tel" name="mobile" id="mobile" class="form-control" placeholder="Mobile Number"
+                        pattern="[6-9][0-9]{9}" maxlength="10" autocomplete="tel" required>
+                      <label for="mobile">Mobile Number</label>
+                      <div class="invalid-feedback">Enter a valid 10-digit mobile number.</div>
+                    </div>
+                  </div>
+
+                  <!-- Same on WhatsApp Checkbox -->
+                  <div class="col-lg-3 col-12 d-flex align-items-center">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="whatsappCheck" required>
+                      <label class="form-check-label ms-2" for="whatsappCheck">Same on WhatsApp</label>
+                    </div>
+                  </div>
+
+                  <!-- WhatsApp Number -->
+                  <div class="col-lg-5 col-12">
+                    <div class="form-floating">
+                      <input type="tel" name="whatsapp" id="whatsapp" class="form-control" placeholder="WhatsApp Number"
+                        pattern="[6-9][0-9]{9}" maxlength="10" autocomplete="off" required>
+                      <label for="whatsapp">WhatsApp Number</label>
+                      <div class="invalid-feedback">Enter a valid 10-digit WhatsApp number.</div>
+                    </div>
+                  </div>
+
+                  <!-- Email + Send OTP -->
+                  <div class="col-lg-10 col-12">
+                    <div class="form-floating">
+                      <input type="email" name="email" id="email" class="form-control" placeholder="Email"
+                        autocomplete="email" required>
+                      <label for="email">Email Address</label>
+                      <div class="invalid-feedback">Please enter a valid email.</div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-2 col-12">
+                    <button type="button" id="sendOtpBtn" class="btn btn-primary w-100 otp-btn" onclick="sendOTP()">
+                      Send OTP
+                    </button>
+                  </div>
+
+                  <!-- OTP Input + Verify -->
+                  <div class="col-lg-10 col-12">
+                    <div class="form-floating">
+                      <input type="text" id="otpInput" name="otp" class="form-control" placeholder="Enter OTP"
+                        maxlength="6" inputmode="numeric" pattern="[0-9]{6}" required>
+                      <label for="otpInput">Enter OTP</label>
+                      <div class="invalid-feedback">Please enter OTP.</div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-2 col-12">
+                    <button type="button" id="verifyOtpBtn" class="btn btn-success w-100 otp-btn" onclick="verifyOTP()">
+                      Verify OTP
+                    </button>
+                  </div>
+
+                  <!-- Address -->
+                  <div class="col-lg-6 col-12">
+                    <div class="form-floating">
+                      <input type="text" name="address" id="address" class="form-control" placeholder="Address"
+                        autocomplete="street-address" required>
+                      <label for="address">Address</label>
+                      <div class="invalid-feedback">Please enter your address.</div>
+                    </div>
+                  </div>
+
+                  <!-- Pincode (auto-fills city & state) -->
+                  <div class="col-lg-6 col-12">
+                    <div class="form-floating">
+                      <input type="text" name="pincode" id="pincode" class="form-control" placeholder="Pincode"
+                        pattern="[0-9]{6}" maxlength="6" inputmode="numeric" autocomplete="postal-code" required>
+                      <label for="pincode">Pincode</label>
+                      <div class="invalid-feedback">Enter a valid 6-digit pincode.</div>
+                    </div>
+                  </div>
+
+                  <!-- City (auto-filled) -->
+                  <div class="col-lg-6 col-12">
+                    <div class="form-floating">
+                      <input type="text" name="city" id="city" class="form-control" placeholder="City"
+                        autocomplete="address-level2" required>
+                      <label for="city">City</label>
+                      <div class="invalid-feedback">Please enter your city.</div>
+                    </div>
+                  </div>
+
+                  <!-- State (auto-filled) -->
+                  <div class="col-lg-6 col-12">
+                    <div class="form-floating">
+                      <input type="text" name="state" id="state" class="form-control" placeholder="State"
+                        autocomplete="address-level1" required>
+                      <label for="state">State</label>
+                      <div class="invalid-feedback">Please enter your state.</div>
+                    </div>
+                  </div>
+
+                  <!-- Educational Details -->
+                  <fieldset class="col-12">
+                    <legend class="h4 mb-3">Educational Details</legend>
+
+                    <div class="row g-3">
+
+                      <div class="col-lg-6 col-12">
+                        <div class="form-floating">
+                          <select class="form-select" id="standardSelect" name="standard" required>
+                            <option value="" disabled selected>-- Select Standard --</option>
+                            <option value="Degree">Degree</option>
+                          </select>
+                          <label for="standardSelect">Select Standard</label>
+                          <div class="invalid-feedback">Please select your standard.</div>
+                        </div>
+                      </div>
+
+                      <!-- COURSE DROPDOWN -->
+                      <div class="col-lg-6 col-12" id="degreeCourseDiv" style="display: none;">
+                        <div class="form-floating">
+                          <select class="form-select" id="degreeCourseSelect" name="degreeCourse" required>
+                            <option value="" disabled selected>-- Select Course --</option>
+                            <option value="BA">BA</option>
+                            <option value="BSc">B.Sc</option>
+                            <option value="BCom">B.Com</option>
+                            <option value="BBA">BBA</option>
+                            <option value="BCA">BCA</option>
+                          </select>
+                          <label for="degreeCourseSelect">Select Course</label>
+                        </div>
+                      </div>
+
+                      <!-- YEAR DROPDOWN -->
+                      <div class="col-lg-6 col-12" id="degreeYearDiv" style="display: none;">
+                        <div class="form-floating">
+                          <select class="form-select" id="degreeYearSelect" name="degreeYear" required>
+                            <option value="" disabled selected>-- Select Year --</option>
+                            <option value="1st Year">1st Year</option>
+                            <option value="2nd Year">2nd Year</option>
+                            <option value="3rd Year">3rd Year</option>
+                          </select>
+                          <label for="degreeYearSelect">Select Year</label>
+                        </div>
+                      </div>
+
+                      <!-- SCHOOL / COLLEGE NAME -->
+                      <div class="col-lg-6 col-12">
+                        <div class="form-floating">
+                          <input type="text" name="schoolCollege" id="schoolCollege" class="form-control"
+                            placeholder="School / College Name" required>
+                          <label for="schoolCollege">School / College Name</label>
+                          <div class="invalid-feedback">Please enter your school/college name.</div>
+                        </div>
+                      </div>
+
+                      <!-- SCHOOL / COLLEGE CODE -->
+                      <div class="col-lg-6 col-12">
+                        <div class="form-floating">
+                          <input type="text" name="schoolCollegeCode" id="schoolCollegeCode" class="form-control"
+                            placeholder="School / College Code" required>
+                          <label for="schoolCollegeCode">School / College Code</label>
+                          <div class="invalid-feedback">Please enter your school/college Code.</div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-12">
+                        <div class="form-floating">
+                          <select id="courseSelect" name="course" class="form-select" required>
+                            <option value="" disabled selected>
+                              -- Applying For --
+                            </option>
+                          </select>
+                          <label for="courseSelect">
+                            Applying For
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-12">
+                        <div class="form-floating">
+                          <input type="text" id="feeInput" name="fee" class="form-control" placeholder="Fee" readonly
+                            aria-readonly="true" tabindex="-1">
+                          <label for="feeInput">Registration Fee</label>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-12">
+                        <div class="d-flex">
+                          <div class="form-floating flex-grow-1">
+                            <input type="text" id="promoCode" name="promo_code" class="form-control"
+                              placeholder="Promo Code">
+                            <label for="promoCode">Promo Code</label>
+                          </div>
+
+                          <button type="button" class="btn btn-success ms-2">
+                            Apply
+                          </button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <!-- Terms & Conditions -->
+                  <!-- Checkbox Section -->
+                  <div class="tc-checkbox-wrapper">
+                    <label>
+                      <input type="checkbox" id="agreeCheckbox" name="terms" value="accepted" required>
+                      I acknowledge that I have read, understood,
+                      and accepted the <span style="color:blue; font-weight:bold;">Terms & Conditions</span> of AchievO.
+                    </label>
+                  </div>
+
+                  <!-- Terms & Conditions Popup Modal -->
+                  <div id="termsModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal()">&times;</span>
+
+                      <h1>Terms & Conditions</h1>
+                      <h2>1. Acceptance of Terms</h2>
+                      <p>
+                        By registering on the AchievO platform, the student and parent/guardian
+                        agree to comply with all terms, policies, rules, and guidelines.
+                      </p>
+                      <h2>2. Eligibility</h2>
+                      <p>
+                        Students applying for the scholarship examination or educational services
+                        must meet the eligibility criteria announced by AchievO.
+                      </p>
+                      <h2>3. Accuracy of Information</h2>
+                      <p>
+                        Applicants must provide accurate and complete information.
+                        Incorrect or fraudulent information may lead to rejection or cancellation.
+                      </p>
+                      <h2>4. Scholarship Examination</h2>
+                      <ul>
+                        <li>Scholarship examination performance</li>
+                        <li>Merit ranking</li>
+                        <li>Eligibility verification</li>
+                        <li>Submitted document verification</li>
+                      </ul>
+                      <h2>5. No Guaranteed Admission</h2>
+                      <ul>
+                        <li>No guaranteed institution admission</li>
+                        <li>No guaranteed seat allocation</li>
+                        <li>No guaranteed placement</li>
+                        <li>No guaranteed government benefit</li>
+                        <li>No guaranteed university admission</li>
+                      </ul>
+                      <h2>6. Scholarship Benefits</h2>
+                      <ul>
+                        <li>Student performance</li>
+                        <li>Scholarship category</li>
+                        <li>Program rules</li>
+                        <li>Availability of scholarship seats/funds</li>
+                      </ul>
+                      <h2>7. Scholarship Applicability</h2>
+                      <p>
+                        Scholarship benefits apply only to eligible tuition fee components
+                        specifically mentioned by AchievO and cannot be exchanged for cash.
+                      </p>
+                      <h2>8. Continuation of Scholarship</h2>
+                      <ul>
+                        <li>Minimum 8.5 GPA or equivalent to 85%</li>
+                        <li>Good conduct and discipline</li>
+                        <li>Regular attendance where applicable</li>
+                      </ul>
+                      <h2>9. Scholarship Cancellation</h2>
+                      <ul>
+                        <li>Academic underperformance</li>
+                        <li>Misconduct</li>
+                        <li>Violation of rules</li>
+                        <li>Submission of false documents</li>
+                        <li>Malpractice during examinations</li>
+                        <li>Misuse of platform services</li>
+                      </ul>
+                      <h2>10. Examination Rules</h2>
+                      <p>
+                        Students must follow all examination guidelines.
+                        Any unfair practices, impersonation, cheating,
+                        or technical manipulation may lead to disqualification.
+                      </p>
+                      <h2>11. Online Examination Responsibility</h2>
+                      <ul>
+                        <li>Stable internet connection</li>
+                        <li>Compatible device</li>
+                        <li>Valid login credentials</li>
+                        <li>Timely examination access</li>
+                      </ul>
+                      <p>
+                        AchievO is not responsible for student-side technical failures.
+                      </p>
+                      <h2>12. Application Fee & Refund Policy</h2>
+                      <p>
+                        Registration fees are non-refundable and non-transferable
+                        except where approved by AchievO management.
+                      </p>
+                      <h2>13. Use of Student Data</h2>
+                      <ul>
+                        <li>Scholarship processing</li>
+                        <li>Academic communication</li>
+                        <li>Result notifications</li>
+                        <li>SMS, WhatsApp, email, and call communications</li>
+                        <li>Platform improvements and analytics</li>
+                      </ul>
+                      <p>
+                        AchievO will not sell personal data to unauthorized third parties.
+                      </p>
+                      <h2>14. Communication Consent</h2>
+                      <ul>
+                        <li>Phone calls</li>
+                        <li>SMS notifications</li>
+                        <li>WhatsApp communication</li>
+                        <li>Email notifications</li>
+                        <li>Platform announcements</li>
+                      </ul>
+                      <h2>15. Document Verification</h2>
+                      <p>
+                        AchievO reserves the right to verify academic records,
+                        identity documents, and submitted certificates at any stage.
+                      </p>
+                      <h2>16. Intellectual Property</h2>
+                      <p>
+                        All study materials, reports, videos, branding,
+                        logos, and platform resources belong to AchievO.
+                        Unauthorized copying or redistribution is prohibited.
+                      </p>
+                      <h2>17. Platform Availability</h2>
+                      <p>
+                        AchievO may modify, suspend, or discontinue any feature,
+                        scholarship scheme, or service without prior notice.
+                      </p>
+                      <h2>18. Limitation of Liability</h2>
+                      <ul>
+                        <li>Technical interruptions</li>
+                        <li>Internet failures</li>
+                        <li>Data loss caused by external factors</li>
+                        <li>Examination disruptions beyond reasonable control</li>
+                        <li>Partner institution decisions</li>
+                      </ul>
+                      <h2>19. Code of Conduct</h2>
+                      <p>
+                        Students must maintain respectful behavior while using the platform,
+                        attending examinations, and interacting with mentors.
+                      </p>
+                      <h2>20. Changes to Terms</h2>
+                      <p>
+                        AchievO reserves the right to modify these Terms & Conditions
+                        at any time. Updated terms become effective once published.
+                      </p>
+                      <h2>21. Governing Law</h2>
+                      <p>
+                        These Terms & Conditions are governed by the laws of India
+                        under Telangana jurisdiction.
+                      </p>
+                      <h2>22. Consent Declaration</h2>
+                      <ul>
+                        <li>All provided information is correct</li>
+                        <li>Terms & Conditions have been read and understood</li>
+                        <li>Applicant agrees to comply with AchievO policies</li>
+                      </ul>
+
+                      <!-- Agreement Section -->
+                      <div class="agree-section d-flex justify-content-end">
+                        <button type="button" class="btn btn-success ms-2" id="acceptBtn">
+                          I Agree
+                        </button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="col-12 mt-3">
+                    <button type="submit" id="submitBtn" class="form-control btn btn-primary btn-lg fw-bold">
+                      Submit Registration
+                    </button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Ad Column -->
+      <aside class="ads" aria-hidden="true">
+        <div class="ads-track">
+
+          <a href="https://vahinidegreecollege.in" target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='images/Ads poster.png') }}" alt="Advertisement"></a>
+          <img src="{{ url_for('static', filename='images/college_ad_5.png') }}" alt="Advertisement">
+          <img src="{{ url_for('static', filename='images/college_ad_6.png') }}" alt="Advertisement">
+
+          <!-- Duplicate for seamless loop -->
+          <img src="{{ url_for('static', filename='images/college_ad_4.png') }}" alt="Advertisement">
+          <img src="{{ url_for('static', filename='images/college_ad_5.png') }}" alt="Advertisement">
+          <img src="{{ url_for('static', filename='images/college_ad_6.png') }}" alt="Advertisement">
+
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer section-padding">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-12 mb-4 pb-2">
+          <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" width="200" alt="AchievO Logo">
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <h6 class="site-footer-title mb-3">Resources</h6>
+          <ul class="site-footer-links">
+            <li><a href="#" class="site-footer-link">Home</a></li>
+            <li><a href="#" class="site-footer-link">Courses</a></li>
+            <li><a href="#" class="site-footer-link">How it Works</a></li>
+            <li><a href="#" class="site-footer-link">Testimonials</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+          <h6 class="site-footer-title mb-3">Company</h6>
+          <ul class="site-footer-links">
+            <li><a href="#" class="site-footer-link">About</a></li>
+            <li><a href="#" class="site-footer-link">Contact</a></li>
+            <li><a href="{{ url_for('faqs') }}" class="site-footer-link">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-12 mb-4 mb-lg-0">
+          <h6 class="site-footer-title mb-3">Information</h6>
+          <p class="text-white mb-3">
+            <a href="tel:+919010190590" class="site-footer-link">+91 901-019-0590</a>
+          </p>
+          <p class="text-white mb-3">
+            <a href="mailto:info@achievo.com" class="site-footer-link">info@achievo.com</a>
+          </p>
+
+          <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61576820880066" target="_blank" rel="noopener"
+              aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/AchievoMedia" target="_blank" rel="noopener" aria-label="X / Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="mailto:info@achievo.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.instagram.com/achievo_edu/" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+
+  <script>
+    /* ── Datepicker for DOB ── */
+    $(function () {
+      let currentYear = new Date().getFullYear();
+
+      $("#dob").datepicker({
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "1995:" + currentYear,
+        maxDate: 0,
+        minDate: new Date(1995, 0, 1),
+        dateFormat: "yy-mm-dd",
+
+        onSelect: function () {
+          if (submitAttempted) {
+            $(this)
+              .removeClass("is-invalid")
+              .addClass("is-valid");
+          }
+          $(this).datepicker("hide");
+        }
+      });
+
+      /* Prevent manual typing but allow datepicker and browser autofill */
+      $("#dob").on("keydown", function (e) {
+        // Allow Tab, Shift+Tab, Backspace, Delete, arrows
+        const allowedKeys = [9, 16, 8, 46, 37, 38, 39, 40];
+
+        if (!allowedKeys.includes(e.which)) {
+          e.preventDefault();
+        }
+      });
+
+      /* Prevent paste */
+      $("#dob").on("paste", function (e) {
+        e.preventDefault();
+      });
+
+      /* Prevent drag & drop */
+      $("#dob").on("drop", function (e) {
+        e.preventDefault();
+      });
+
+      /* Calendar icon click */
+      $(".dob-icon").on("click", function () {
+        $("#dob").datepicker("show");
+      });
+
+      /* Browser autocomplete selection */
+      $("#dob").on("change", function () {
+        if ($(this).val().trim() !== "") {
+          $("#dob").datepicker("hide");
+          if (submitAttempted) {
+            $(this)
+              .removeClass("is-invalid")
+              .addClass("is-valid");
+          }
+        }
+      });
+    });
+  </script>
+
+  <script>
+    /* Gender */
+    document.querySelectorAll('input[name="gender"]').forEach(radio => {
+
+      radio.addEventListener("change", function () {
+
+        document.querySelectorAll('input[name="gender"]').forEach(r => {
+          r.classList.remove("is-invalid");
+          r.classList.remove("is-valid");
+        });
+
+        this.classList.add("is-valid");
+
+      });
+
+    });
+
+    /* ── WhatsApp same-as-mobile ── */
+    document.getElementById('whatsappCheck')
+      .addEventListener('change', function () {
+
+        const whatsapp =
+          document.getElementById('whatsapp');
+        const mobile =
+          document.getElementById('mobile');
+        localStorage.setItem(
+          "sameAsWhatsapp",
+          this.checked
+        );
+
+        if (this.checked) {
+          whatsapp.value =
+            mobile.value;
+          whatsapp.readOnly = true;
+
+          /* Remove red border */
+          whatsapp.classList.remove(
+            'is-invalid'
+          );
+        } else {
+          whatsapp.readOnly = false;
+        }
+        checkSubmitReady();
+      });
+
+    document.getElementById('mobile')
+      .addEventListener('input', function () {
+        if (
+          document.getElementById('whatsappCheck')
+            .checked
+        ) {
+
+          const whatsapp =
+            document.getElementById('whatsapp');
+          whatsapp.value =
+            this.value;
+          whatsapp.classList.remove(
+            'is-invalid'
+          );
+
+        }
+
+      });
+
+
+    /* ── Pincode → City / State (India) ── */
+    document.getElementById('pincode').addEventListener('input', function () {
+      if (this.value.length === 6) {
+        fetch('https://api.postalpincode.in/pincode/' + this.value)
+          .then(r => r.json())
+          .then(data => {
+            if (data[0].Status === 'Success') {
+              document.getElementById('city').value = data[0].PostOffice[0].District;
+              document.getElementById('state').value = data[0].PostOffice[0].State;
+            } else {
+              alert('Invalid PIN Code. Please check and try again.');
+            }
+          })
+          .catch(() => alert('Could not fetch pincode details. Please enter city and state manually.'));
+      }
+    });
+
+    /* ── Applying For Dropdown ── */
+    const degreeCourseSelect =
+      document.getElementById("degreeCourseSelect");
+
+    const courseSelect =
+      document.getElementById("courseSelect");
+
+    // COURSES DATA
+    const higherStudies = {
+
+      BSc: [
+        "M.Sc - Mathematics",
+        "M.Sc - Physics",
+        "M.Sc - Chemistry",
+        "M.Sc - Computer Science",
+        "M.Sc - Statistics",
+        "M.Sc - Data Science",
+        "M.Sc - Biotechnology",
+        "MCA",
+        "MBA"
+      ],
+
+      BCom: [
+        "M.Com - Accounting & Finance",
+        "M.Com - Taxation",
+        "M.Com - Banking & Insurance",
+        "MBA - Finance",
+        "MBA - Marketing",
+        "MBA - HR",
+        "MBA - Business Analytics",
+        "MCA"
+      ],
+
+      BA: [
+        "M.A - History",
+        "M.A - Economics",
+        "M.A - English",
+        "M.A - Political Science",
+        "M.A - Sociology",
+        "M.A - Psychology",
+        "MBA",
+        "MCA"
+      ],
+
+      BBA: [
+        "MBA - Finance",
+        "MBA - Marketing",
+        "MBA - HR",
+        "MBA - Business Analytics",
+        "MBA - International Business",
+        "M.Com"
+      ],
+
+      BCA: [
+        "MCA - General",
+        "MCA - AI",
+        "MCA - Data Science",
+        "MCA - Cyber Security",
+        "MCA - Cloud Computing",
+        "M.Sc - Computer Science",
+        "M.Sc - Information Technology",
+        "M.Sc - Data Science",
+        "MBA"
+      ]
+    };
+
+    // UPDATE APPLYING FOR DROPDOWN
+    degreeCourseSelect.addEventListener("change", function () {
+      let selectedCourse = this.value;
+
+      // RESET OPTIONS
+      courseSelect.innerHTML =
+        '<option value="" disabled selected>-- Applying For --</option>';
+
+      // ADD NEW OPTIONS
+      if (higherStudies[selectedCourse]) {
+        higherStudies[selectedCourse].forEach(function (course) {
+          let option =
+            document.createElement("option");
+          option.value = course;
+          option.textContent = course;
+          courseSelect.appendChild(option);
+        });
+      }
+    });
+
+    /* ── Fee display ── */
+    const standardSelect = document.getElementById("standardSelect");
+    const feeInput = document.getElementById("feeInput");
+
+    // SHOW FEE WHEN DEGREE IS SELECTED
+    function updateFee() {
+      if (standardSelect.value === "Degree") {
+        const promoApplied =
+          localStorage.getItem("promoApplied");
+        if (promoApplied === "true") {
+          feeInput.value = "₹999";
+        } else {
+          feeInput.value = "₹1799";
+        }
+      } else {
+        feeInput.value = "";
+      }
+    }
+    standardSelect.addEventListener(
+      "change",
+      updateFee
+    );
+    window.addEventListener(
+      "load",
+      updateFee
+    );
+    window.addEventListener(
+      "pageshow",
+      updateFee
+    );
+    localStorage.setItem(
+      "promoApplied",
+      "true"
+    );
+    feeInput.value = "₹999";
+    localStorage.removeItem(
+      "promoApplied"
+    );
+
+    /* ── Terms & Conditions ── */
+    /* Elements */
+    const checkbox = document.getElementById("agreeCheckbox");
+    const modal = document.getElementById("termsModal");
+    const acceptBtn = document.getElementById("acceptBtn");
+
+    checkbox.addEventListener("change", function () {
+      checkSubmitReady();
+    });
+
+    /* Open popup when checkbox clicked */
+    checkbox.addEventListener("click", function (event) {
+      event.preventDefault();
+      modal.style.display = "block";
+    });
+
+    /* Close popup function */
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    /* Tick checkbox when I Agree clicked */
+    acceptBtn.addEventListener("click", function () {
+      checkbox.checked = true;
+      modal.style.display = "none";
+      checkSubmitReady();
+    });
+
+    /* Close popup when clicked outside */
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    let otpVerified = false;
+    /* ── OTP Flow ── */
+    function sendOTP() {
+      const email = document.getElementById('email').value.trim();
+
+      if (!email) {
+        alert('Please enter your email address first.');
+        return;
+      }
+
+      const btn = document.getElementById('sendOtpBtn');
+
+      // Disable button immediately
+      btn.disabled = true;
+      btn.innerText = "Sending...";
+
+      fetch('/send-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      })
+        .then(r => r.json())
+        .then(() => {
+          alert('OTP sent to ' + email);
+          let seconds = 30;
+          btn.innerText = `Resend in ${seconds}s`;
+
+          const timer = setInterval(() => {
+            seconds--;
+
+            if (seconds > 0) {
+              btn.innerText = `Resend in ${seconds}s`;
+            } else {
+              clearInterval(timer);
+              btn.disabled = false;
+              btn.innerText = "Resend OTP";
+            }
+          }, 1000);
+        })
+        .catch(() => {
+          alert('Failed to send OTP. Please try again.');
+          btn.disabled = false;
+          btn.innerText = "Send OTP";
+        });
+    }
+
+    function verifyOTP() {
+      const otp = document.getElementById('otpInput').value.trim();
+      if (!otp) { alert('Please enter the OTP.'); return; }
+
+      fetch('/verify-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ otp })
+      })
+        .then(r => r.json())
+        .then(data => {
+          if (data.status === 'success') {
+            const verifyBtn =
+              document.getElementById(
+                "verifyOtpBtn"
+              );
+            otpVerified = true;
+            verifyBtn.innerText =
+              "Verified";
+            verifyBtn.disabled = true;
+            document.getElementById("otpInput").readOnly = true;
+            alert("OTP Verified Successfully ✅");
+          } else {
+            alert("Invalid OTP ❌. Please try again.");
+          }
+        })
+        .catch(() => alert('OTP verification failed. Please try again.'));
+    }
+  </script>
+
+  <script>
+    /* ===========================
+    FORM VALIDATION
+ =========================== */
+
+    const form = document.getElementById("registrationForm");
+    let submitAttempted = false;
+    form.addEventListener("submit", function (e) {
+      submitAttempted = true;
+      let formValid = true;
+      const fields = form.querySelectorAll(
+        "input, select, textarea"
+      );
+      fields.forEach(field => {
+        if (field.type === "hidden") return;
+
+        /* DOB validation */
+        if (field.id === "dob") {
+          if (field.value.trim() === "") {
+            field.classList.add("is-invalid");
+            field.classList.remove("is-valid");
+            formValid = false;
+          } else {
+            field.classList.remove("is-invalid");
+            field.classList.add("is-valid");
+          }
+          return;
+        }
+
+        if (!field.checkValidity()) {
+          field.classList.add("is-invalid");
+          field.classList.remove("is-valid");
+          formValid = false;
+        } else {
+          field.classList.remove("is-invalid");
+          field.classList.add("is-valid");
+        }
+      });
+
+      if (!formValid) {
+        e.preventDefault();
+        alert("Please complete all required fields.");
+        return;
+      }
+
+      if (!otpVerified) {
+        e.preventDefault();
+        alert("Please verify your OTP.");
+        return;
+      }
+
+      if (!checkbox.checked) {
+        e.preventDefault();
+        alert("Please accept the Terms & Conditions.");
+        return;
+      }
+    });
+
+
+    /* ===========================
+       LIVE VALIDATION AFTER FIRST SUBMIT
+    =========================== */
+
+    form.querySelectorAll(
+      "input, select, textarea"
+    ).forEach(field => {
+      field.addEventListener("input", validateField);
+      field.addEventListener("change", validateField);
+    });
+
+    function validateField() {
+      if (!submitAttempted) return;
+      if (this.id === "dob") {
+        if (this.value.trim() === "") {
+          this.classList.add("is-invalid");
+          this.classList.remove("is-valid");
+        } else {
+          this.classList.remove("is-invalid");
+          this.classList.add("is-valid");
+        }
+        return;
+      }
+      if (this.checkValidity()) {
+        this.classList.remove("is-invalid");
+        this.classList.add("is-valid");
+      } else {
+        this.classList.remove("is-valid");
+        this.classList.add("is-invalid");
+      }
+    }
+  </script>
+
+  <script>
+    const standard = document.getElementById("standardSelect");
+    const courseDiv = document.getElementById("degreeCourseDiv");
+    const yearDiv = document.getElementById("degreeYearDiv");
+
+    function updateEducationFields() {
+
+      if (standard.value === "Degree") {
+        courseDiv.style.display = "block";
+        yearDiv.style.display = "block";
+      } else {
+        courseDiv.style.display = "none";
+        yearDiv.style.display = "none";
+      }
+    }
+
+    standard.addEventListener("change", updateEducationFields);
+    /* Initial page load */
+    window.addEventListener("load", updateEducationFields);
+    /* Browser back button */
+    window.addEventListener("pageshow", updateEducationFields);
+    /* WhatsappCheck after load */
+    window.addEventListener(
+      "pageshow",
+      function () {
+        const check =
+          document.getElementById(
+            "whatsappCheck"
+          );
+        if (check.checked) {
+          document.getElementById(
+            "whatsapp"
+          ).value =
+            document.getElementById(
+              "mobile"
+            ).value;
+        }
+      }
+    );
+  </script>
+
+</body>
+
+</html>

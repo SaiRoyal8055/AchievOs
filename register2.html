@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" class="lm">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration | AchievO</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+
+    <!-- Register CSS -->
+    <link rel="stylesheet" href="css/register.css">
+
+</head>
+
+<body>
+
+    <!-- =======================================
+                NAVBAR
+======================================= -->
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                <img src="img/logo.png" alt="AchievO Logo" class="img-fluid logo-i">
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+                <ul class="navbar-nav align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#features">
+                            Features
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+                <button class="boc d-flex align-items-center justify-content-center" id="thbtn"
+                    style="width:38px;height:38px;padding:0;border-radius:12px" aria-label="Toggle theme">
+                    <i class="fa-solid fa-sun" id="suni" style="display:none"></i>
+                    <i class="fa-solid fa-moon" id="mooni"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =======================================
+            MOBILE TOP ADS
+======================================= -->
+
+    <section class="mobile-ads-top">
+
+        <div class="mobile-slider">
+
+            <a href="#">
+                <img src="img/ads/Ads poster.png">
+            </a>
+
+            <a href="#">
+                <img src="assets/images/ads/ad2.jpg">
+            </a>
+
+            <a href="#">
+                <img src="assets/images/ads/ad3.jpg">
+            </a>
+
+            <a href="#">
+                <img src="assets/images/ads/ad4.jpg">
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =======================================
+        PAGE TITLE
+======================================= -->
+
+    <section class="register-hero">
+
+        <div class="container text-center">
+
+            <span class="badge-register">
+
+                Scholarship Registration
+
+            </span>
+
+            <h1>
+
+                Student Registration
+
+            </h1>
+
+            <p>
+
+                Complete the registration form below to
+                begin your scholarship journey.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =======================================
+            MAIN LAYOUT
+======================================= -->
+
+    <section class="register-wrapper">
+
+        <div class="container-fluid">
+
+            <div class="row justify-content-center gx-4">
+
+                <!-- =======================================
+            LEFT ADS
+======================================= -->
+
+                <div class="col-xl-2 d-none d-xl-block">
+
+                    <div class="side-ads">
+
+                        <div class="ads-track">
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad1.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad2.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad3.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad4.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad5.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad6.jpg">
+
+                            </a>
+
+                            <!-- duplicate -->
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad1.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad2.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad3.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad4.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad5.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad6.jpg">
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =======================================
+        REGISTRATION FORM
+======================================= -->
+
+                <div class="col-xl-8 col-lg-10">
+
+                    <div class="registration-card">
+
+                        <div class="card-header-custom">
+
+                            <h2>
+
+                                Student Registration
+
+                            </h2>
+
+                            <p>
+
+                                Fill in your details carefully.
+
+                            </p>
+
+                        </div>
+
+                        <form id="registrationForm" action="/register" method="POST">
+
+                            <div class="row g-4">
+
+                                <!-- Student Name -->
+
+                                <div class="col-md-6">
+
+                                    <div class="form-floating">
+
+                                        <input type="text" class="form-control" id="studentName" name="studentName"
+                                            placeholder="Student Name" required>
+
+                                        <label>
+
+                                            Student Name
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Father Name -->
+
+                                <div class="col-md-6">
+
+                                    <div class="form-floating">
+
+                                        <input type="text" class="form-control" id="fatherName" name="fatherName"
+                                            placeholder="Father Name" required>
+
+                                        <label>
+
+                                            Father / Guardian Name
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- DOB -->
+
+                                <div class="col-md-6">
+
+                                    <div class="form-floating">
+
+                                        <input type="text" class="form-control" id="dob" name="dob" placeholder="DOB"
+                                            required>
+
+                                        <label>
+
+                                            Date of Birth
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Gender -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label mb-2">
+
+                                        Gender
+
+                                    </label>
+
+                                    <div class="gender-group">
+
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="gender" value="Male">
+
+                                            <label>
+
+                                                Male
+
+                                            </label>
+
+                                        </div>
+
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="gender" value="Female">
+
+                                            <label>
+
+                                                Female
+
+                                            </label>
+
+                                        </div>
+
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="gender" value="Other">
+
+                                            <label>
+
+                                                Other
+
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Mobile -->
+
+                                <div class="col-md-6">
+
+                                    <div class="form-floating">
+
+                                        <input type="tel" class="form-control" id="mobile" name="mobile"
+                                            placeholder="Mobile" required>
+
+                                        <label>
+
+                                            Mobile Number
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- WhatsApp -->
+
+                                <div class="col-md-6">
+
+                                    <div class="form-floating">
+
+                                        <input type="tel" class="form-control" id="whatsapp" name="whatsapp"
+                                            placeholder="Whatsapp" required>
+
+                                        <label>
+
+                                            WhatsApp Number
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Email -->
+
+                                <div class="col-md-9">
+
+                                    <div class="form-floating">
+
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="Email" required>
+
+                                        <label>
+
+                                            Email Address
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-3">
+
+                                    <button type="button" class="btn btn-primary w-100 btn-lg">
+
+                                        Send OTP
+
+                                    </button>
+
+                                </div>
+
+                                <!-- OTP -->
+
+                                <div class="col-md-9">
+
+                                    <div class="form-floating">
+
+                                        <input type="text" class="form-control" id="otp" name="otp" placeholder="OTP">
+
+                                        <label>
+
+                                            Enter OTP
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-3">
+
+                                    <button type="button" class="btn btn-success w-100 btn-lg">
+
+                                        Verify OTP
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Address -->
+
+                                <div class="col-12">
+
+                                    <div class="form-floating">
+
+                                        <input type="text" class="form-control" id="address" name="address"
+                                            placeholder="Address">
+
+                                        <label>
+
+                                            Address
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- PINCODE -->
+
+                                <div class="col-md-4">
+
+                                    <div class="form-floating">
+
+                                        <input type="text" class="form-control" id="pincode" name="pincode"
+                                            maxlength="6" placeholder="Pincode" required>
+
+                                        <label>Pincode</label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- CITY -->
+
+                                <div class="col-md-4">
+
+                                    <div class="form-floating">
+
+                                        <input type="text" class="form-control" id="city" name="city" placeholder="City"
+                                            required>
+
+                                        <label>City</label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- STATE -->
+
+                                <div class="col-md-4">
+
+                                    <div class="form-floating">
+
+                                        <input type="text" class="form-control" id="state" name="state"
+                                            placeholder="State" required>
+
+                                        <label>State</label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- ==========================================
+            EDUCATIONAL DETAILS
+=========================================== -->
+
+                                <div class="col-12 mt-4">
+
+                                    <div class="section-title">
+
+                                        <h4>Educational Details</h4>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- STANDARD -->
+
+                                <div class="col-md-6">
+
+                                    <div class="form-floating">
+
+                                        <select class="form-select" id="standardSelect" name="standard">
+
+                                            <option value="">Select Standard</option>
+
+                                            <option value="Degree">
+                                                Degree
+                                            </option>
+
+                                        </select>
+
+                                        <label>Select Standard</label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- COURSE -->
+
+                                <div class="col-md-6" id="degreeCourseDiv">
+
+                                    <div class="form-floating">
+
+                                        <select class="form-select" id="degreeCourseSelect" name="degreeCourse">
+
+                                            <option value="">
+                                                Select Course
+                                            </option>
+
+                                            <option>BA</option>
+
+                                            <option>B.Sc</option>
+
+                                            <option>B.Com</option>
+
+                                            <option>BBA</option>
+
+                                            <option>BCA</option>
+
+                                        </select>
+
+                                        <label>Course</label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- YEAR -->
+
+                                <div class="col-md-6" id="degreeYearDiv">
+
+                                    <div class="form-floating">
+
+                                        <select class="form-select" id="degreeYearSelect" name="degreeYear">
+
+                                            <option value="">
+                                                Select Year
+                                            </option>
+
+                                            <option>1st Year</option>
+
+                                            <option>2nd Year</option>
+
+                                            <option>3rd Year</option>
+
+                                        </select>
+
+                                        <label>Year</label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- COLLEGE NAME -->
+
+                                <div class="col-md-6">
+
+                                    <div class="form-floating">
+
+                                        <input type="text" class="form-control" id="college" name="college"
+                                            placeholder="College">
+
+                                        <label>College Name</label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- COLLEGE CODE -->
+
+                                <div class="col-md-6">
+
+                                    <div class="form-floating">
+
+                                        <input type="text" class="form-control" id="collegeCode" name="collegeCode"
+                                            placeholder="College Code">
+
+                                        <label>College Code</label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- APPLYING FOR -->
+
+                                <div class="col-md-6">
+
+                                    <div class="form-floating">
+
+                                        <select class="form-select" id="courseSelect" name="course">
+
+                                            <option value="">
+                                                Select Course
+                                            </option>
+
+                                        </select>
+
+                                        <label>Applying For</label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- FEE -->
+
+                                <div class="col-md-6">
+
+                                    <div class="form-floating">
+
+                                        <input type="text" class="form-control" id="feeInput" readonly>
+
+                                        <label>Registration Fee</label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- PROMO -->
+
+                                <div class="col-md-8">
+
+                                    <div class="form-floating">
+
+                                        <input type="text" class="form-control" id="promoCode" placeholder="Promo">
+
+                                        <label>Promo Code</label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <button type="button" class="btn btn-warning w-100 btn-lg">
+
+                                        Apply
+
+                                    </button>
+
+                                </div>
+
+
+                                <!-- TERMS -->
+
+                                <div class="col-12 mt-4">
+
+                                    <div class="terms-box">
+
+                                        <label class="form-check">
+
+                                            <input class="form-check-input" type="checkbox" id="agreeCheckbox">
+
+                                            <span>
+
+                                                I have read and agree to the
+                                                <a href="#" id="openTerms">
+                                                    Terms & Conditions
+                                                </a>
+
+                                            </span>
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- SUBMIT -->
+
+                                <div class="col-12">
+
+                                    <button class="btn register-btn w-100" id="submitBtn" type="submit">
+
+                                        Register Now
+
+                                        <i class="fa-solid fa-arrow-right ms-2"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==========================================
+            RIGHT ADS
+=========================================== -->
+
+                <div class="col-xl-2 d-none d-xl-block">
+
+                    <div class="side-ads">
+
+                        <div class="ads-track">
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad7.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad8.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad9.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad10.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad11.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad12.jpg">
+
+                            </a>
+
+                            <!-- Duplicate -->
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad7.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad8.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad9.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad10.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad11.jpg">
+
+                            </a>
+
+                            <a href="#">
+
+                                <img src="assets/images/ads/ad12.jpg">
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+        MOBILE BOTTOM ADS
+=========================================== -->
+
+    <section class="mobile-ads-bottom">
+
+        <div class="mobile-slider">
+
+            <a href="#">
+
+                <img src="assets/images/ads/ad1.jpg">
+
+            </a>
+
+            <a href="#">
+
+                <img src="assets/images/ads/ad2.jpg">
+
+            </a>
+
+            <a href="#">
+
+                <img src="assets/images/ads/ad3.jpg">
+
+            </a>
+
+            <a href="#">
+
+                <img src="assets/images/ads/ad4.jpg">
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+                FOOTER
+=========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-4">
+
+                    <h3>NexusAI</h3>
+
+                    <p>
+
+                        Empowering students through AI-powered
+                        education and scholarship opportunities.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <h5>Quick Links</h5>
+
+                    <ul class="footer-links">
+
+                        <li><a href="index.html">Home</a></li>
+
+                        <li><a href="index.html#about">About</a></li>
+
+                        <li><a href="index.html#features">Features</a></li>
+
+                        <li><a href="index.html#contact">Contact</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <h5>Contact</h5>
+
+                    <p>
+
+                        info@nexusai.com
+
+                    </p>
+
+                    <p>
+
+                        +91 XXXXX XXXXX
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center">
+
+                © 2026 NexusAI. All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Register JS -->
+
+    <script src="js/register.js"></script>
+
+    <script>
+    document.documentElement.classList.add("lm");
+    </script>
+</body>
+
+</html>

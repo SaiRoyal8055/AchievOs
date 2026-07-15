@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>AchievO</title>
+
+   <link rel="icon" href="assets/img/AchievO favicon.png" type="image/png">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+   <!-- Bootstrap 5.3 -->
+   <link href="css/bootstrap.min.css" rel="stylesheet" />
+   <!-- AOS Animate on Scroll -->
+   <link href="css/aos.css" rel="stylesheet" />
+   <!-- Swiper -->
+   <link href="css/swiper-bundle.min.css" rel="stylesheet" />
+   <!-- all min css -->
+   <link rel="stylesheet" href="css/all.min.css" />
+   <!-- magnific CSS -->
+   <link rel="stylesheet" href="css/magnific-popup.css" />
+   <!-- Style CSS -->
+   <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+   <!-- ======================== LANDING PAGE ======================== -->
+   <div id="cursor-glow"></div>
+   <div id="landing">
+      <!-- NAVBAR -->
+      <nav id="nbar">
+         <div class="container">
+            <div class="d-flex align-items-center justify-content-between w-100">
+               <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+                  <img src="assets/img/logo.png" alt="AchievO Logo" class="img-fluid logo-i">
+               </a>
+               <div class="d-none d-lg-flex align-items-center gap-1 mx-auto">
+                  <a href="#" class="nav-link">Home</a>
+                  <a href="#courses" class="nav-link">Courses</a>
+                  <a href="#about" class="nav-link">About Us</a>
+                  <a href="#how" class="nav-link">How It Works</a>
+                  <a href="#gallery" class="nav-link">Gallery</a>
+                  <a href="#testimonials" class="nav-link">Testimonials</a>
+                  <a href="#contact" class="nav-link">Contact</a>
+                  <a href="#faq" class="nav-link">FAQs</a>
+               </div>
+               <div class="d-flex align-items-center gap-2">
+                  <button class="boc d-flex align-items-center justify-content-center" id="thbtn"
+                     style="width:38px;height:38px;padding:0;border-radius:12px" aria-label="Toggle theme">
+                     <i class="fa-solid fa-sun" id="suni" style="display:none"></i>
+                     <i class="fa-solid fa-moon" id="mooni"></i>
+                  </button>
+
+                  <a href="register2.html" class="bgrd btn px-3 py-2 d-none d-sm-flex align-items-center gap-1">
+                     Register <i class="fa-solid fa-arrow-right fa-sm"></i>
+                  </a>
+                  <button class="boc d-lg-none px-2 py-2" id="mbtog" style="border-radius:10px">
+                     <i class="fa-solid fa-bars" id="barIcon"></i>
+                     <i class="fa-solid fa-xmark" id="xIcon" style="display:none"></i>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <div id="mbmenu">
+         <a href="#" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">Home</a>
+         <a href="#courses" class="nav-link d-block py-3 border-bottom"
+            style="border-color:var(--bd)!important">courses</a>
+         <a href="#about" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">About
+            Us</a>
+         <a href="#how" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">How It
+            Works</a>
+         <a href="#gallery" class="nav-link d-block py-3 border-bottom"
+            style="border-color:var(--bd)!important">Gallery</a>
+         <a href="#testimonials" class="nav-link d-block py-3 border-bottom"
+            style="border-color:var(--bd)!important">Testimonials</a>
+         <a href="#contact" class="nav-link d-block py-3 border-bottom"
+            style="border-color:var(--bd)!important">Contact</a>
+         <a href="#faq" class="nav-link d-block py-3">FAQ</a>
+         <div class="d-flex gap-2 mt-3">
+            <a href="register2.html" class="bgrd btn px-3 py-2 d-none d-sm-flex align-items-center gap-1">
+               Register <i class="fa-solid fa-arrow-right fa-sm"></i>
+            </a>
+         </div>
+      </div>
+
+      <!-- HERO -->
+      <section id="hero">
+         <div class="aur aur-a" style="top:-80px;left:-120px"></div>
+         <div class="aur aur-b" style="top:180px;right:-180px"></div>
+         <div class="aur aur-a" style="bottom:-80px;left:45%;transform:translateX(-50%);opacity:.4"></div>
+         <div class="container position-relative" style="z-index:2">
+            <div class="text-center">
+
+               <h1 class="h1 afu" style="animation-delay:.12s"><span class="gt">Smarter Scholarships.</span>
+                  <h2><span class="gt">Smarter Learning. Better Outcomes.</span></h2>
+               </h1>
+               <p class="mx-auto afu"
+                  style="max-width:580px;font-size:clamp(.95rem,1.8vw,1.2rem);color:var(--tx2);margin-bottom:36px;animation-delay:.2s">
+                  Empower students with AI-driven learning, scholarship guidance, mock tests, performance analytics, and
+                  personalized career support - all in one intelligent platform.</p>
+               <div class="afu" style="animation-delay:.3s">
+                  <a href="{{ url_for('register') }}" class="bgrd btn px-4 py-3 fs-6">Get Started</a>
+                  <a href="#courses" class="btn btn-outline-light btn-lg">Explore Courses</a>
+               </div>
+            </div>
+      </section>
+
+      <!-- COURSES -->
+      <section id="courses" class="sp" style="background:var(--bg2);">
+         <div class="container">
+            <div class="text-center mb-5 rv">
+               <span class="slbl">COURSES</span>
+               <h2 class="stitle">
+                  Choose Your <span class="gt">Scholarship Category</span>
+               </h2>
+               <p class="ssub mx-auto">
+                  Participate in merit-based scholarship examinations and unlock opportunities for your academic future.
+               </p>
+            </div>
+            <div class="row g-4">
+               <!-- SSC -->
+               <div class="col-lg-4 col-md-6 rv">
+                  <div class="gc overflow-hidden h-100">
+                     <img src="assets/img/courses/ssc.jpg" alt="SSC Scholarship" class="img-fluid w-100"
+                        style="height:220px;object-fit:cover;">
+                     <div class="p-4">
+                        <div class="ftico mb-3">
+                           <i class="fa-solid fa-school"></i>
+                        </div>
+                        <h3 class="fs-4 fw-bold">
+                           SSC Merit Scholarship
+                        </h3>
+                        <p style="color:var(--tx2);">
+                           Building future leaders through academic excellence.
+                           Scholarship examinations designed exclusively for SSC students.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                           <span class="ftag">
+                              SSC Level
+                           </span>
+                           <a href="#details1" class="btn btn-primary rounded-pill px-4">
+                              Coming Soon..
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- EAMCET -->
+               <div class="col-lg-4 col-md-6 rv" style="transition-delay:.1s;">
+                  <div class="gc overflow-hidden h-100">
+                     <img src="assets/img/courses/eamcet.jpg" alt="EAMCET Scholarship" class="img-fluid w-100"
+                        style="height:220px;object-fit:cover;">
+                     <div class="p-4">
+                        <div class="ftico mb-3">
+                           <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="fs-4 fw-bold">
+                           EAMCET Merit Scholarship
+                        </h3>
+                        <p style="color:var(--tx2);">
+                           Rewarding talented students preparing for engineering and professional education.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                           <span class="ftag">
+                              Intermediate
+                           </span>
+                           <a href="#details2" class="btn btn-primary rounded-pill px-4">
+                              Coming Soon..
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Degree -->
+               <div class="col-lg-4 col-md-6 rv" style="transition-delay:.2s;">
+                  <div class="gc overflow-hidden h-100">
+                     <img src="assets/img/courses/degree.jpg" alt="Degree Scholarship" class="img-fluid w-100"
+                        style="height:220px;object-fit:cover;">
+                     <div class="p-4">
+                        <div class="ftico mb-3">
+                           <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <h3 class="fs-4 fw-bold">
+                           Degree Merit Scholarship
+                        </h3>
+                        <p style="color:var(--tx2);">
+                           Merit scholarships for undergraduate students to help achieve academic excellence and career
+                           success.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                           <span class="ftag">
+                              Degree
+                           </span>
+                           <a href="/templates/AchievO.html" class="btn btn-primary rounded-pill px-4">
+                              View Details
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- FEATURES -->
+      <section id="features" class="sp position-relative">
+         <div class="aur aur-b" style="top:50%;left:-200px;transform:translateY(-50%)"></div>
+         <div class="container position-relative" style="z-index:1">
+            <div class="text-center mb-5 rv">
+               <span class="slbl">Why Choose AchievO</span>
+               <h2 class="stitle">
+                  Scholarships that <span class="gt">reward your potential</span>
+               </h2>
+               <p class="ssub mx-auto">
+                  AchievO helps students unlock scholarships, rewards, and career opportunities through
+                  performance-driven assessments.
+               </p>
+            </div>
+            <div class="row g-3 justify-content-center rv">
+               <!-- Card 1 -->
+               <div class="col-6 col-md-3">
+                  <div class="gc p-4 text-center h-100">
+                     <div style="width:52px;height:52px;border-radius:14px;
+                    background:rgba(99,102,241,.12);
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    margin:0 auto 14px;">
+                        <i class="fa-solid fa-graduation-cap fa-xl" style="color:#8b5cf6"></i>
+                     </div>
+                     <div class="fw-semibold mb-2">
+                        Merit Scholarships
+                     </div>
+                     <div style="font-size:.82rem;color:var(--tx3);">
+                        Scholarships designed to recognize academic excellence and outstanding performance.
+                     </div>
+                  </div>
+               </div>
+               <!-- Card 2 -->
+               <div class="col-6 col-md-3">
+                  <div class="gc p-4 text-center h-100">
+                     <div style="width:52px;height:52px;border-radius:14px;
+                    background:rgba(16,185,129,.12);
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    margin:0 auto 14px;">
+                        <i class="fa-solid fa-sack-dollar fa-xl" style="color:#10b981"></i>
+                     </div>
+                     <div class="fw-semibold mb-2">
+                        Cash Rewards
+                     </div>
+                     <div style="font-size:.82rem;color:var(--tx3);">
+                        Earn rewards of up to ₹1,00,000 by excelling in scholarship assessments.
+                     </div>
+                  </div>
+               </div>
+               <!-- Card 3 -->
+               <div class="col-6 col-md-3">
+                  <div class="gc p-4 text-center h-100">
+                     <div style="width:52px;height:52px;border-radius:14px;
+                    background:rgba(245,158,11,.12);
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    margin:0 auto 14px;">
+                        <i class="fa-solid fa-book-open fa-xl" style="color:#f59e0b"></i>
+                     </div>
+                     <div class="fw-semibold mb-2">
+                        Fee Waivers
+                     </div>
+                     <div style="font-size:.82rem;color:var(--tx3);">
+                        Reduce tuition expenses with fee waivers of up to 100%.
+                     </div>
+                  </div>
+               </div>
+               <!-- Card 4 -->
+               <div class="col-6 col-md-3">
+                  <div class="gc p-4 text-center h-100">
+                     <div style="width:52px;height:52px;border-radius:14px;
+                    background:rgba(236,72,153,.12);
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    margin:0 auto 14px;">
+                        <i class="fa-solid fa-rocket fa-xl" style="color:#ec4899"></i>
+                     </div>
+                     <div class="fw-semibold mb-2">
+                        Career Growth
+                     </div>
+                     <div style="font-size:.82rem;color:var(--tx3);">
+                        Access mentorship, learning resources, and career opportunities to succeed.
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- SCHOLARSHIP DETAILS -->
+      <section id="details3" class="sp" style="background:var(--bg);">
+         <div class="container">
+            <!-- Heading -->
+            <div class="text-center mb-5 rv">
+               <span class="slbl">Degree Scholarship</span>
+               <h2 class="stitle">
+                  Merit Scholarship <span class="gt">Program</span>
+               </h2>
+               <p class="ssub mx-auto">
+                  Helping deserving students pursue higher education through merit-based scholarships.
+               </p>
+            </div>
+            <!-- Hero Video -->
+            <div class="gc overflow-hidden mb-5 rv">
+               <video autoplay muted loop playsinline class="w-100">
+                  <source src="assets/img/courses/deg-vid.mp4" type="video/mp4">
+               </video>
+            </div>
+            <div class="row g-4">
+
+               <!-- Offers -->
+               <div class="col-lg-6 rv">
+                  <div class="gc p-4 h-100">
+                     <div class="ftico">
+                        <i class="fa-solid fa-gift"></i>
+                     </div>
+                     <h3 class="fs-4 fw-bold mt-3">
+                        PG-MTK Offers
+                     </h3>
+                     <p style="color:var(--tx2)">
+                        Enrolled Degree students (1st–3rd year) are eligible for the PG-CET Mock Test Kit.
+                     </p>
+                     <ul class="mt-3">
+                        <li>30 Days Mock Tests</li>
+                        <li>Exam Strategy Practice</li>
+                        <li>Time Management</li>
+                        <li>Performance Analysis</li>
+                        <li>Strength & Weakness Reports</li>
+                     </ul>
+                     <span class="ftag">
+                        Free Mock Kit
+                     </span>
+                  </div>
+               </div>
+
+               <!-- Aim -->
+               <div class="col-lg-6 rv">
+                  <div class="gc p-4 h-100">
+                     <div class="ftico">
+                        <i class="fa-solid fa-bullseye"></i>
+                     </div>
+                     <h3 class="fs-4 fw-bold mt-3">
+                        Program Aim
+                     </h3>
+                     <ul>
+                        <li>Encourage Academic Excellence</li>
+                        <li>Financial Support</li>
+                        <li>Motivate Higher Performance</li>
+                        <li>Reduce Educational Burden</li>
+                     </ul>
+                     <span class="ftag">
+                        Student Success
+                     </span>
+                  </div>
+               </div>
+
+               <!-- Structure -->
+               <div class="col-lg-6 rv">
+                  <div class="gc p-4 h-100">
+                     <div class="ftico">
+                        <i class="fa-solid fa-ranking-star"></i>
+                     </div>
+                     <h3 class="fs-4 fw-bold mt-3">
+                        Scholarship Structure
+                     </h3>
+                     <table class="table align-middle">
+                        <thead>
+                           <tr>
+                              <th>Rank</th>
+                              <th>Scholarship</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>1 – 5</td>
+                              <td>₹50,000</td>
+                           </tr>
+                           <tr>
+                              <td>6 – 10</td>
+                              <td>₹40,000</td>
+                           </tr>
+                           <tr>
+                              <td>11 – 100</td>
+                              <td>₹20,000</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <span class="ftag">
+                        Merit Based
+                     </span>
+                  </div>
+               </div>
+
+               <!-- Benefits -->
+               <div class="col-lg-6 rv">
+                  <div class="gc p-4 h-100">
+                     <div class="ftico">
+                        <i class="fa-solid fa-award"></i>
+                     </div>
+                     <h3 class="fs-4 fw-bold mt-3">
+                        Benefits
+                     </h3>
+                     <ul>
+                        <li>Up to 100% Tuition Scholarship</li>
+                        <li>Merit Certificate</li>
+                        <li>30-Day Mock Test Kit</li>
+                        <li>Career Growth Opportunities</li>
+                        <li>Academic Recognition</li>
+                     </ul>
+                     <span class="ftag">
+                        Student Rewards
+                     </span>
+                  </div>
+               </div>
+
+               <!-- Eligibility -->
+               <div class="col-lg-6 rv">
+                  <div class="gc p-4 h-100">
+                     <div class="ftico">
+                        <i class="fa-solid fa-user-check"></i>
+                     </div>
+                     <h3 class="fs-4 fw-bold mt-3">
+                        Eligibility
+                     </h3>
+                     <ul>
+                        <li>Intermediate / 12th Pass</li>
+                        <li>Degree Students (B.Sc, B.Com, BA, BBA, BCA...)</li>
+                        <li>1st, 2nd & 3rd Year Students</li>
+                        <li>Academic Documents Required</li>
+                     </ul>
+                     <span class="ftag">
+                        Open Eligibility
+                     </span>
+                  </div>
+               </div>
+
+               <!-- Exam -->
+               <div class="col-lg-6 rv">
+                  <div class="gc p-4 h-100">
+                     <div class="ftico">
+                        <i class="fa-solid fa-file-pen"></i>
+                     </div>
+                     <h3 class="fs-4 fw-bold mt-3">
+                        Exam Pattern
+                     </h3>
+                     <h2 class="fw-bold">
+                        90 Questions
+                     </h2>
+                     <p>100 Marks</p>
+                     <p>Duration : 90 Minutes</p>
+                     <p>Subjects : Aptitude, English & GK</p>
+                     <p>MCQ Based Examination</p>
+                     <span class="ftag">
+                        Scholarship Test
+                     </span>
+                  </div>
+               </div>
+
+               <!-- Conditions -->
+               <div class="col-lg-12 rv">
+                  <div class="gc p-4">
+                     <div class="ftico">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                     </div>
+                     <h3 class="fs-4 fw-bold mt-3">
+                        Scholarship Conditions
+                     </h3>
+                     <div class="row">
+                        <div class="col-md-6">
+                           <ul>
+                              <li>Scholarship depends on exam performance.</li>
+                              <li>Applicable only for Tuition Fee.</li>
+                              <li>Maintain Academic Performance.</li>
+                           </ul>
+                        </div>
+                        <div class="col-md-6">
+                           <ul>
+                              <li>Maintain Attendance.</li>
+                              <li>Minimum 8.5 GPA Required.</li>
+                              <li>Cannot be combined with other offers.</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- TOP STUDENTS -->
+               <div class="container">
+
+                  <div class="text-center mb-5 reveal">
+                     <span class="tag">Student Rankings</span>
+                     <h2 class="section-title">
+                        Top <span class="gt">Degree Students</span> 🎓
+                     </h2>
+                     <p class="section-text">
+                        Celebrating the outstanding performers who have excelled in our scholarship assessments.
+                     </p>
+                  </div>
+
+                  <div class="glass-card reveal">
+                     <div class="table-responsive">
+                        <table border="1" cellpadding="8" cellspacing="0">
+                           <thead>
+                              <tr>
+                                 <th>SI.NO</th>
+                                 <th>NAME</th>
+                                 <th>EXAM</th>
+                                 <th>COLLEGE</th>
+                                 <th>AREA (AP/TG)</th>
+                                 <th>WON SCHOLARSHIPS</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>1</td>
+                                 <td>Rakesh Verma</td>
+                                 <td>GATE</td>
+                                 <td>Telangana University</td>
+                                 <td>AP</td>
+                                 <td>25000</td>
+                              </tr>
+                              <tr>
+                                 <td>2</td>
+                                 <td>Snehalatha Devi</td>
+                                 <td>CAT</td>
+                                 <td>Andhra Loyola College</td>
+                                 <td>AP</td>
+                                 <td>75000</td>
+                              </tr>
+                              <tr>
+                                 <td>3</td>
+                                 <td>Prudhvi Raj</td>
+                                 <td>GMAT</td>
+                                 <td>Kakatiya Degree College</td>
+                                 <td>AP</td>
+                                 <td>50000</td>
+                              </tr>
+                              <tr>
+                                 <td>4</td>
+                                 <td>Aparna Singh</td>
+                                 <td>GMAT</td>
+                                 <td>SRR Govt Arts College</td>
+                                 <td>AP</td>
+                                 <td>50000</td>
+                              </tr>
+                              <tr>
+                                 <td>5</td>
+                                 <td>Mahesh Babu</td>
+                                 <td>GMAT</td>
+                                 <td>Telangana University</td>
+                                 <td>TG</td>
+                                 <td>25000</td>
+                              </tr>
+                              <tr>
+                                 <td>6</td>
+                                 <td>Triveni Rao</td>
+                                 <td>GMAT</td>
+                                 <td>Osmania Degree College</td>
+                                 <td>AP</td>
+                                 <td>25000</td>
+                              </tr>
+                              <tr>
+                                 <td>7</td>
+                                 <td>Aravind Kumar</td>
+                                 <td>GATE</td>
+                                 <td>Andhra Loyola College</td>
+                                 <td>TG</td>
+                                 <td>50000</td>
+                              </tr>
+                              <tr>
+                                 <td>8</td>
+                                 <td>Pavani Reddy</td>
+                                 <td>GMAT</td>
+                                 <td>SRR Govt Arts College</td>
+                                 <td>TG</td>
+                                 <td>25000</td>
+                              </tr>
+                              <tr>
+                                 <td>9</td>
+                                 <td>Kishore Teja</td>
+                                 <td>GATE</td>
+                                 <td>Telangana University</td>
+                                 <td>TG</td>
+                                 <td>25000</td>
+                              </tr>
+                              <tr>
+                                 <td>10</td>
+                                 <td>Bhargavi Sri</td>
+                                 <td>GATE</td>
+                                 <td>Telangana University</td>
+                                 <td>AP</td>
+                                 <td>25000</td>
+                              </tr>
+                              <tr>
+                                 <td>11</td>
+                                 <td>Yogesh Kumar</td>
+                                 <td>GATE</td>
+                                 <td>SRR Govt Arts College</td>
+                                 <td>AP</td>
+                                 <td>75000</td>
+                              </tr>
+                              <tr>
+                                 <td>12</td>
+                                 <td>Samyuktha Rao</td>
+                                 <td>GMAT</td>
+                                 <td>Kakatiya Degree College</td>
+                                 <td>TG</td>
+                                 <td>25000</td>
+                              </tr>
+                              <tr>
+                                 <td>13</td>
+                                 <td>Charan Raj</td>
+                                 <td>GMAT</td>
+                                 <td>Telangana University</td>
+                                 <td>TG</td>
+                                 <td>75000</td>
+                              </tr>
+                              <tr>
+                                 <td>14</td>
+                                 <td>Akanksha Sharma</td>
+                                 <td>GATE</td>
+                                 <td>SRR Govt Arts College</td>
+                                 <td>TG</td>
+                                 <td>75000</td>
+                              </tr>
+                              <tr>
+                                 <td>15</td>
+                                 <td>Ritvik Reddy</td>
+                                 <td>GMAT</td>
+                                 <td>Telangana University</td>
+                                 <td>TG</td>
+                                 <td>50000</td>
+                              </tr>
+                              <tr>
+                                 <td>16</td>
+                                 <td>Manasa Devi</td>
+                                 <td>CAT</td>
+                                 <td>Andhra Loyola College</td>
+                                 <td>TG</td>
+                                 <td>25000</td>
+                              </tr>
+                              <tr>
+                                 <td>17</td>
+                                 <td>Gautham Krishna</td>
+                                 <td>GATE</td>
+                                 <td>Telangana University</td>
+                                 <td>AP</td>
+                                 <td>40000</td>
+                              </tr>
+                              <tr>
+                                 <td>18</td>
+                                 <td>Tejaswini Rao</td>
+                                 <td>GMAT</td>
+                                 <td>Andhra Loyola College</td>
+                                 <td>TG</td>
+                                 <td>25000</td>
+                              </tr>
+                              <tr>
+                                 <td>19</td>
+                                 <td>Hemant Kumar</td>
+                                 <td>GMAT</td>
+                                 <td>Telangana University</td>
+                                 <td>AP</td>
+                                 <td>25000</td>
+                              </tr>
+                              <tr>
+                                 <td>20</td>
+                                 <td>Vaishnavi Reddy</td>
+                                 <td>GMAT</td>
+                                 <td>Andhra Loyola College</td>
+                                 <td>TG</td>
+                                 <td>50000</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+
+                  <!-- CTA -->
+                  <div class="text-center mt-5 reveal">
+                     <h3 class="mb-3">
+                        Ready to Become Our Next Top Performer?
+                     </h3>
+                     <p class="mb-4 text-muted">
+                        Register today, participate in the scholarship assessment, and secure your place among AchievO's
+                        top students.
+                     </p>
+                     <a href="{{ url_for('register') }}" class="bgrd btn px-4 py-3 fs-6">
+                        Register Now
+                        <i class="fa-solid ms-2"></i>
+                     </a>
+                     <a href="#section_2" class="btn-outline-custom ms-3">
+                        Back
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ABOUT US -->
+      <section id="about" class="sp" style="background:var(--bg2)">
+         <div class="container">
+            <div class="text-center mb-5 rv">
+               <span class="slbl">About AchievO</span>
+               <h2 class="stitle">
+                  Empowering Students Through
+                  <span class="gt">Merit Scholarships</span>
+               </h2>
+               <p class="lead mx-auto" style="max-width:700px;">
+                  AchievO recognizes academic excellence by providing scholarships,
+                  financial assistance, and opportunities that help students achieve
+                  their educational goals.
+               </p>
+            </div>
+            <div class="row align-items-center g-5">
+               <!-- Left -->
+               <div class="col-lg-5 rv">
+                  <div class="about-card">
+                     <img src="assets/img/About.jpg" class="img-fluid rounded-4" alt="AchievO">
+                     <div class="about-card-content">
+                        <h3>Start Your Journey 🚀</h3>
+                        <p>
+                           Register today and unlock scholarship opportunities,
+                           performance analytics, and personalized learning support.
+                        </p>
+                        <a href="{{ url_for('register') }}" class="bgrd btn px-4 py-3 fs-6">
+                           Register Now
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <!-- Right -->
+               <div class="col-lg-7 rv">
+                  <div class="about-content">
+                     <h3 class="mb-4">
+                        Transforming Education Through Opportunity
+                     </h3>
+                     <p>
+                        The <strong>AchievO Merit Scholarship Program</strong> identifies and
+                        rewards academically talented students by providing financial
+                        support that helps them continue their education with confidence.
+                     </p>
+                     <p>
+                        Over the past five years, more than
+                        <strong>24,800 students</strong> have participated in scholarship
+                        assessments conducted across Intermediate, Degree, and EAMCET
+                        categories.
+                     </p>
+                     <p>
+                        Based on merit and performance,
+                        <strong>1,500+ students</strong> have received scholarships,
+                        cash awards, and tuition fee waivers totaling over
+                        <strong>₹2.5 Crores</strong>.
+                     </p>
+                     <p>
+                        Outstanding performers have earned
+                        <strong>cash prizes up to ₹1,00,000</strong>, while many others
+                        have received partial scholarships and
+                        <strong>100% tuition fee waivers</strong>, enabling deserving
+                        students to pursue higher education without financial barriers.
+                     </p>
+                     <div class="row mt-5">
+                        <div class="col-6 col-md-3">
+                           <div class="stat-box">
+                              <h2>24.8K+</h2>
+                              <span>Students</span>
+                           </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                           <div class="stat-box">
+                              <h2>1500+</h2>
+                              <span>Scholarships</span>
+                           </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                           <div class="stat-box">
+                              <h2>₹2.5Cr+</h2>
+                              <span>Rewards</span>
+                           </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                           <div class="stat-box">
+                              <h2>100%</h2>
+                              <span>Fee Waiver</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section id="how" class="sp" style="background:var(--bg3)">
+         <div class="container">
+            <div class="text-center mb-5 rv">
+               <span class="slbl">How It Works</span>
+               <h2 class="stitle">Up and running in <span class="gt">3 simple steps</span></h2>
+            </div>
+            <div class="row g-4">
+               <div class="col-md-4 rv">
+                  <div class="gc p-4 h-100 text-center">
+                     <div class="hnum">1</div>
+                     <h3 class="fs-5 fw-semibold mb-2">Register</h3>
+                     <p style="font-size:.875rem;color:var(--tx2)">Welcome! Register now to participate in our
+                        merit-based examination and unlock your opportunity to earn a scholarship. By registering, you
+                        take the first step toward testing your academic potential and qualifying for financial support.
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-4 rv" style="transition-delay:.1s">
+                  <div class="gc p-4 h-100 text-center">
+                     <div class="hnum">2</div>
+                     <h3 class="fs-5 fw-semibold mb-2">Take Exam</h3>
+                     <p style="font-size:.875rem;color:var(--tx2)">This examination is designed to evaluate your subject
+                        knowledge, time management skills, and accuracy under competitive conditions.</p>
+                  </div>
+               </div>
+               <div class="col-md-4 rv" style="transition-delay:.2s">
+                  <div class="gc p-4 h-100 text-center">
+                     <div class="hnum">3</div>
+                     <h3 class="fs-5 fw-semibold mb-2">Get Scholarship</h3>
+                     <p style="font-size:.875rem;color:var(--tx2)">We believe in recognizing and rewarding academic
+                        excellence. Students who score above the qualifying cut-off marks in our examination will be
+                        eligible for merit-based scholarships.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section id="gallery" class="sp" style="background:var(--bg2)">
+         <div class="container">
+
+            <div class="text-center mb-5 reveal">
+               <span class="slbl">Experience AchievO</span>
+               <h2 class="stitle">
+                  <span class="gt">Student </span>Portal Preview
+               </h2>
+               <p class="lead">
+                  Discover the powerful features designed to simplify learning, monitor progress, and support every step
+                  of your academic journey.
+               </p>
+            </div>
+
+            <div id="galleryCarousel" class="carousel slide reveal" data-bs-ride="carousel">
+
+               <!-- Indicators -->
+               <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
+                  <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3"></button>
+                  <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4"></button>
+                  <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5"></button>
+               </div>
+
+               <!-- Slides -->
+               <div class="carousel-inner gallery-slider">
+                  <div class="carousel-item active">
+                     <img src="assets/img/gallery/Img1.jpeg" class="d-block w-100" alt="Gallery Image 1">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="assets/img/gallery/Img2.jpeg" class="d-block w-100" alt="Gallery Image 2">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="assets/img/gallery/Img3.jpeg" class="d-block w-100" alt="Gallery Image 3">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="assets/img/gallery/Img4.jpeg" class="d-block w-100" alt="Gallery Image 4">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="assets/img/gallery/Img5.jpeg" class="d-block w-100" alt="Gallery Image 5">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="assets/img/gallery/Img6.jpeg" class="d-block w-100" alt="Gallery Image 6">
+                  </div>
+               </div>
+               <!-- Previous -->
+               <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+               </button>
+               <!-- Next -->
+               <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+               </button>
+            </div>
+         </div>
+      </section>
+      <!-- SOCIAL PROOF -->
+      <section id="proof">
+         <div class="container">
+            <div class="row g-3 align-items-center text-center">
+               <div class="col-6 col-sm-3">
+                  <div class="pnum">30+</div>
+                  <div class="plbl"><i class="fa-solid fa-star text-warning me-1"></i>Partner Colleges</div>
+               </div>
+               <div class="col-6 col-sm-3">
+                  <div class="pnum">20K+</div>
+                  <div class="plbl">Scholarship Aspirants</div>
+               </div>
+               <div class="col-6 col-sm-3">
+                  <div class="pnum">1L+</div>
+                  <div class="plbl">Mock Tests Attempted</div>
+               </div>
+               <div class="col-6 col-sm-3">
+                  <div class="pnum">1000+</div>
+                  <div class="plbl">Scholarships Facilitated</div>
+               </div>
+            </div>
+            <div class="lscroll">
+               <div class="ltrack"><span class="lbr">Scholarships</span><span class="lbr">AI Evaluation</span><span
+                     class="lbr">AI Assessment</span><span class="lbr">Mock Tests</span><span class="lbr">Career
+                     Guidance</span><span class="lbr">Skill Development</span><span class="lbr">Learning
+                     Dashboard</span><span class="lbr">Performance Analytics</span><span class="lbr">Progress
+                     Tracking</span><span class="lbr">Scholarships</span><span class="lbr">AI Evaluation</span><span
+                     class="lbr">AI Assessment</span><span class="lbr">Mock Tests</span><span class="lbr">Career
+                     Guidance</span><span class="lbr">Skill Development</span><span class="lbr">Learning
+                     Dashboard</span><span class="lbr">Performance Analytics</span><span class="lbr">Progress
+                     Tracking</span>
+               </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials" class="sp">
+         <div class="container py-5">
+            <div class="text-center mb-5 rv">
+               <span class="slbl">Testimonials</span>
+               <h2 class="stitle">
+                  Loved by <span class="gt">10,000+ Students</span>
+               </h2>
+            </div>
+
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+               <!-- Indicators -->
+               <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0"
+                     class="active"></button>
+                  <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+               </div>
+
+               <div class="carousel-inner">
+                  <!-- ================= Slide 1 ================= -->
+                  <div class="carousel-item active">
+                     <div class="row g-4">
+                        <!-- Card 1 -->
+                        <div class="col-lg-4">
+                           <div class="gc p-4 h-100 d-flex flex-column">
+                              <div class="d-flex gap-1 mb-3">
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                              </div>
+                              <p class="flex-grow-1"
+                                 style="font-size:.9rem;color:var(--tx2);line-height:1.8;font-style:italic;">
+                                 "AchievO helped me prepare confidently for my scholarship exams.
+                                 The AI mock tests and performance reports made learning much
+                                 easier and more effective."
+                              </p>
+                              <div class="profile">
+                                 <div class="profile-icon">
+                                    BR
+                                 </div>
+                                 <div>
+                                    <div style="font-weight:600;">
+                                       Bhargavi Reddy
+                                    </div>
+                                    <div style="font-size:.8rem;color:var(--tx3);">
+                                       SSC Student
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-lg-4">
+                           <div class="gc p-4 h-100 d-flex flex-column">
+                              <div class="d-flex gap-1 mb-3">
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                              </div>
+                              <p class="flex-grow-1"
+                                 style="font-size:.9rem;color:var(--tx2);line-height:1.8;font-style:italic;">
+                                 "The mentors and AI recommendations kept me motivated throughout
+                                 my preparation. I improved my scores in every mock test."
+                              </p>
+                              <div class="profile">
+                                 <div class="profile-icon">
+                                    SK
+                                 </div>
+                                 <div>
+                                    <div style="font-weight:600;">
+                                       Shasi Kumar
+                                    </div>
+                                    <div style="font-size:.8rem;color:var(--tx3);">
+                                       Intermediate Student
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-lg-4">
+                           <div class="gc p-4 h-100 d-flex flex-column">
+                              <div class="d-flex gap-1 mb-3">
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                              </div>
+                              <p class="flex-grow-1"
+                                 style="font-size:.9rem;color:var(--tx2);line-height:1.8;font-style:italic;">
+                                 "AchievO's personalized study plans and scholarship guidance
+                                 helped me stay focused and achieve my academic goals."
+                              </p>
+                              <div class="profile">
+                                 <div class="profile-icon">
+                                    PP
+                                 </div>
+                                 <div>
+                                    <div style="font-weight:600;">
+                                       Priya Patel
+                                    </div>
+                                    <div style="font-size:.8rem;color:var(--tx3);">
+                                       Engineering Student
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- ================= Slide 2 ================= -->
+                  <div class="carousel-item">
+                     <div class="row g-4">
+
+                        <!-- Card 4 -->
+                        <div class="col-lg-4">
+                           <div class="gc p-4 h-100 d-flex flex-column">
+                              <div class="d-flex gap-1 mb-3">
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                              </div>
+                              <p class="flex-grow-1"
+                                 style="font-size:.9rem;color:var(--tx2);line-height:1.8;font-style:italic;">
+                                 "The AI-powered mock tests helped me identify my weak areas and improve my
+                                 performance before the scholarship exam."
+                              </p>
+                              <div class="profile">
+                                 <div class="profile-icon">
+                                    AR
+                                 </div>
+                                 <div>
+                                    <div style="font-weight:600;">
+                                       Ananya Reddy
+                                    </div>
+                                    <div style="font-size:.8rem;color:var(--tx3);">
+                                       Intermediate Student
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="col-lg-4">
+                           <div class="gc p-4 h-100 d-flex flex-column">
+                              <div class="d-flex gap-1 mb-3">
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                              </div>
+                              <p class="flex-grow-1"
+                                 style="font-size:.9rem;color:var(--tx2);line-height:1.8;font-style:italic;">
+                                 "Study materials, AI recommendations, and instant feedback made learning much
+                                 more engaging. I always knew what to improve next."
+                              </p>
+                              <div class="profile">
+                                 <div class="profile-icon">
+                                    RK
+                                 </div>
+                                 <div>
+                                    <div style="font-weight:600;">
+                                       Rahul Kumar
+                                    </div>
+                                    <div style="font-size:.8rem;color:var(--tx3);">
+                                       Polytechnic Student
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="col-lg-4">
+                           <div class="gc p-4 h-100 d-flex flex-column">
+                              <div class="d-flex gap-1 mb-3">
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                              </div>
+                              <p class="flex-grow-1"
+                                 style="font-size:.9rem;color:var(--tx2);line-height:1.8;font-style:italic;">
+                                 "AchievO simplified the entire scholarship journey. From preparation to
+                                 performance tracking, everything was available in one place."
+                              </p>
+                              <div class="profile">
+                                 <div class="profile-icon">
+                                    NS
+                                 </div>
+                                 <div>
+                                    <div style="font-weight:600;">
+                                       Neha Sharma
+                                    </div>
+                                    <div style="font-size:.8rem;color:var(--tx3);">
+                                       Degree Student
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- ================= Slide 3 ================= -->
+                  <div class="carousel-item">
+                     <div class="row g-4">
+
+                        <!-- Card 7 -->
+                        <div class="col-lg-4">
+                           <div class="gc p-4 h-100 d-flex flex-column">
+                              <div class="d-flex gap-1 mb-3">
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                              </div>
+                              <p class="flex-grow-1"
+                                 style="font-size:.9rem;color:var(--tx2);line-height:1.8;font-style:italic;">
+                                 "The performance analytics clearly showed where I needed to improve. It made my
+                                 preparation much more focused."
+                              </p>
+                              <div class="profile">
+                                 <div class="profile-icon">
+                                    KS
+                                 </div>
+                                 <div>
+                                    <div style="font-weight:600;">
+                                       Kiran Sai
+                                    </div>
+                                    <div style="font-size:.8rem;color:var(--tx3);">
+                                       B.Tech Student
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Card 8 -->
+                        <div class="col-lg-4">
+                           <div class="gc p-4 h-100 d-flex flex-column">
+                              <div class="d-flex gap-1 mb-3">
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                              </div>
+                              <p class="flex-grow-1"
+                                 style="font-size:.9rem;color:var(--tx2);line-height:1.8;font-style:italic;">
+                                 "The dashboard made tracking my learning progress incredibly easy. I could monitor
+                                 every improvement after each mock test."
+                              </p>
+                              <div class="profile">
+                                 <div class="profile-icon">
+                                    MR
+                                 </div>
+                                 <div>
+                                    <div style="font-weight:600;">
+                                       Meghana Rao
+                                    </div>
+                                    <div style="font-size:.8rem;color:var(--tx3);">
+                                       Degree Student
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Card 9 -->
+                        <div class="col-lg-4">
+                           <div class="gc p-4 h-100 d-flex flex-column">
+                              <div class="d-flex gap-1 mb-3">
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                                 <i class="fa-solid fa-star text-warning"></i>
+                              </div>
+                              <p class="flex-grow-1"
+                                 style="font-size:.9rem;color:var(--tx2);line-height:1.8;font-style:italic;">
+                                 "AchievO helped me secure a scholarship through structured preparation, personalized
+                                 practice tests, and continuous feedback."
+                              </p>
+                              <div class="profile">
+                                 <div class="profile-icon">
+                                    VP
+                                 </div>
+                                 <div>
+                                    <div style="font-weight:600;">
+                                       Varun Prasad
+                                    </div>
+                                    <div style="font-size:.8rem;color:var(--tx3);">
+                                       SSC Student
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- /.carousel-inner -->
+               <!-- Controls -->
+               <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+               </button>
+
+               <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+               </button>
+            </div>
+         </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="sp position-relative" style="background:var(--bg2);">
+         <div class="aur aur-a" style="top:-100px;left:-120px"></div>
+         <div class="aur aur-b" style="bottom:-100px;right:-120px"></div>
+         <div class="container position-relative" style="z-index:2;">
+            <div class="text-center mb-5 rv">
+               <span class="slbl">Get in Touch</span>
+               <h2 class="stitle">
+                  Let's <span class="gt">Achieve</span> Great Things Together
+               </h2>
+            </div>
+            <div class="row g-4 align-items-stretch">
+
+               <!-- Contact Information -->
+               <div class="col-lg-5 rv">
+                  <div class="pcard h-100">
+                     <h4 class="mb-4">
+                        Contact Information
+                     </h4>
+                     <p style="color:var(--tx2);line-height:1.8;margin-bottom:35px;">
+                        Let's connect! If you have any questions, suggestions, or would like to learn more about our
+                        services, we'd love to hear from you.
+                     </p>
+                     <!-- Phone -->
+                     <div class="cinfo">
+                        <div class="cicon">
+                           <i class="fa-solid fa-phone"></i>
+                           <small>Call Us</small>
+                           <h6>+91 90326 91119</h6>
+                        </div>
+                     </div>
+                     <!-- Head Office -->
+                     <div class="cinfo">
+                        <div class="cicon">
+                           <i class="fa-chisel fa-regular fa-building"></i>
+                           <small>Head Office</small>
+                           <h6>Hyderabad, Telangana - 500072</h6>
+                        </div>
+                     </div>
+                     <!-- Branch -->
+                     <div class="cinfo">
+                        <div class="cicon">
+                           <i class="fa-chisel fa-regular fa-buildings"></i>
+                           <small>Branch Office</small>
+                           <h6>Seethammadhara, Visakhapatnam - 530013</h6>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Contact Form -->
+               <div class="col-lg-7 rv">
+                  <div class="pcard h-100">
+                     <h4 class="mb-4">
+                        Send us a Message
+                     </h4>
+                     <form id="contactForm">
+                        <input type="hidden" name="_captcha" value="false">
+                        <div class="row">
+                           <div class="col-md-6 mb-3">
+                              <input type="text" name="name" class="form-control cinput" placeholder="Your Name"
+                                 required>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <input type="email" name="email" class="form-control cinput" placeholder="Your Email"
+                                 required>
+                           </div>
+                           <div class="col-12 mb-3">
+                              <input type="text" name="subject" class="form-control cinput" placeholder="Subject">
+                           </div>
+                           <div class="col-12 mb-4">
+                              <textarea name="message" rows="6" class="form-control cinput" placeholder="Your Message"
+                                 required></textarea>
+                           </div>
+                           <div class="col-12">
+                              <button class="bgrd btn px-5 py-3" type="submit">
+                                 Send Message
+                                 <i class="fa-solid fa-paper-plane ms-2"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="sp">
+         <div class="container">
+            <div class="text-center mb-5 rv">
+               <span class="slbl">FAQ</span>
+               <h2 class="stitle">Common <span class="gt">questions</span></h2>
+            </div>
+            <div class="row justify-content-center rv">
+               <div class="col-lg-8">
+                  <div class="accordion acco" id="faqAcc">
+                     <!-- General Scholarship FAQs -->
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                           <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#generalFAQ">
+                              🎓 General Scholarship FAQs
+                           </button>
+                        </h2>
+                        <div id="generalFAQ" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+                           <div class="accordion-body">
+                              <p><strong>1. What is the Merit Scholarship Program?</strong><br>
+                                 The Merit Scholarship Program identifies talented students through a scholarship
+                                 examination and provides fee concessions based on performance.
+                              </p>
+                              <p><strong>2. Who can apply?</strong><br>
+                                 Students from 10th, Intermediate, and Degree levels who meet eligibility criteria can
+                                 apply.
+                              </p>
+                              <p><strong>3. Is there any application fee?</strong><br>
+                                 Yes. Application fees vary based on academic level.
+                              </p>
+                              <p><strong>4. How can I apply?</strong><br>
+                                 Register online, fill the form, submit details, and confirm registration.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Examination FAQs -->
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#examFAQ">
+                              📝 Examination Related FAQs
+                           </button>
+                        </h2>
+                        <div id="examFAQ" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                           <div class="accordion-body">
+                              <p><strong>5. What subjects are included?</strong><br>
+                                 Subjects are based on the student's academic syllabus.
+                              </p>
+                              <p><strong>6. What is the mode of examination?</strong><br>
+                                 The scholarship exam is conducted online.
+                              </p>
+                              <p><strong>7. What is the duration?</strong><br>
+                                 Duration is typically 60–90 minutes.
+                              </p>
+                              <p><strong>8. Can students attempt from home?</strong><br>
+                                 Yes, if conducted online with a stable internet connection.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Scholarship & Selection FAQs -->
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#selectionFAQ">
+                              🏆 Scholarship &amp; Selection FAQs
+                           </button>
+                        </h2>
+                        <div id="selectionFAQ" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                           <div class="accordion-body">
+                              <p><strong>9. How are winners selected?</strong><br>
+                                 Based on exam performance and merit ranking.
+                              </p>
+                              <p><strong>10. Does qualifying guarantee admission?</strong><br>
+                                 No. It provides eligibility for fee benefits only.
+                              </p>
+                              <p><strong>11. What benefits are provided?</strong><br>
+                                 Up to 100% tuition fee scholarship and 30 days free EAMCET preparation access.
+                              </p>
+                              <p><strong>12. When are results announced?</strong><br>
+                                 Results are published on the official website.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Technical & Support FAQs -->
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#supportFAQ">
+                              💻 Technical &amp; Support FAQs
+                           </button>
+                        </h2>
+                        <div id="supportFAQ" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                           <div class="accordion-body">
+                              <p><strong>13. What if I forget my login credentials?</strong><br>
+                                 Use the <strong>Forgot Password</strong> option.
+                              </p>
+                              <p><strong>14. Whom should I contact for technical issues?</strong><br>
+                                 Contact the official helpdesk through the support section or email.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section id="cta" style="background:var(--bg2)">
+         <div class="aur aur-a" style="top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+         <div style="position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                width:650px;
+                height:420px;
+                background:radial-gradient(ellipse,rgba(31,177,240,.18),transparent 70%);
+                pointer-events:none;">
+         </div>
+         <div class="container position-relative" style="z-index:2">
+            <div class="rv text-center">
+               <span class="hbadge mb-4 d-inline-flex">
+                  <span class="bdot"></span>
+                  Merit Scholarships • AI-Powered Learning • Performance Analytics
+               </span>
+               <h2 style="font-size:clamp(2rem,5vw,3.8rem);
+                       font-weight:700;
+                       letter-spacing:-.025em;
+                       line-height:1.1;
+                       margin-bottom:18px;">
+                  Ready to Unlock Your <br>
+                  <span class="gt">Scholarship Potential?</span>
+               </h2>
+               <p style="font-size:1.05rem;
+                      color:var(--tx2);
+                      max-width:650px;
+                      margin:0 auto 36px;">
+                  Join thousands of ambitious students who are transforming their future through
+                  AchievO's scholarship assessments, personalized learning resources,
+                  and performance-driven academic support.
+               </p>
+               <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap">
+                  <a href="{{ url_for('register') }}" class="bgrd btn px-4 py-3 fs-6">
+                     Register Now
+                     <i class="fa-solid fa-arrow-right ms-2"></i>
+                  </a>
+                  <a href="#courses" class="boc btn px-4 py-3 fs-6">
+                     <i class="fa-solid fa-book-open me-2"></i>
+                     Explore Scholarships
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer id="foot">
+         <div class="container">
+            <div class="row g-5 mb-5">
+               <!-- Logo & About -->
+               <div class="col-lg-4 d-flex flex-column">
+                  <a class="mb-3" href="#">
+                     <img src="assets/img/logo.png" alt="AchievO Logo" style="height:200px;">
+                  </a>
+                  <div class="contact-info">
+                     <p class="mb-2">
+                        <a href="tel:+919010190590">
+                           <i class="fa-solid fa-phone me-2"></i>
+                           +91 901-019-0590
+                        </a>
+                     </p>
+                     <p class="contact-info">
+                        <a href="mailto:kugosinfo@company.com">
+                           <i class="fa-solid fa-envelope me-2"></i>
+                           kugosinfo@company.com
+                        </a>
+                     </p>
+                  </div>
+               </div>
+               <!-- Resources -->
+               <div class="col-lg-3 col-md-4 col-6 fcol">
+                  <h5>Resources</h5>
+                  <a href="#">Home</a>
+                  <a href="#courses">Courses</a>
+                  <a href="#how">How it Works</a>
+                  <a href="#gallery">Gallery</a>
+                  <a href="#testimonials">Testimonials</a>
+               </div>
+               <!-- Company -->
+               <div class="col-lg-3 col-md-4 col-6 fcol">
+                  <h5>Company</h5>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                  <a href="#faq">FAQs</a>
+               </div>
+               <!-- Support -->
+               <div class="col-6 col-md-2 fcol">
+                  <h5>Support</h5>
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms &amp; Conditions</a>
+                  <a href="#">Help Center</a>
+                  <a href="#">Contact Us</a>
+               </div>
+            </div>
+            <!-- Bottom Bar -->
+            <div class="bottom-bar d-flex align-items-center justify-content-between flex-wrap gap-3"
+               style="border-top:1px solid var(--bd)">
+               <p style="font-size:.82rem;color:var(--tx3);margin:0">
+                  © 2026 Kugos. All Rights Reserved.
+               </p>
+               <div class="d-flex gap-2">
+                  <a href="https://www.facebook.com/" target="_blank" class="sico">
+                     <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://x.com/" target="_blank" class="sico">
+                     <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="https://www.instagram.com/" target="_blank" class="sico">
+                     <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="mailto:kugosinfo@company.com" class="sico">
+                     <i class="fa-solid fa-envelope"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+   <!-- /landing -->
+
+
+   <!-- ======================== SCRIPTS ======================== -->
+   <!-- jQuery -->
+   <script src="js/jquery-3.7.1.min.js"></script>
+   <!-- Bootstrap 5 -->
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <!-- AOS -->
+   <script src="js/aos.js"></script>
+   <!-- Swiper -->
+   <script src="js/chart.umd.min.js"></script>
+   <!-- CounterUp -->
+   <script src="js/jquery.magnific-popup.min.js"></script>
+   <!-- Main js -->
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
