@@ -2438,7 +2438,7 @@ a {
   gap: 18px;
 
   padding: 10px;
-  
+
   margin: 65px 0;
 
 }
@@ -2762,4 +2762,218 @@ section {
   #cursor-glow {
     display: none;
   }
+}
+
+
+/*==========================
+ Degree Programs
+==========================*/
+
+#degree-programs {
+  position: relative;
+  overflow: hidden;
+}
+
+.degree-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.degree-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--sf);
+  border: 1px solid var(--bd);
+  border-radius: 22px;
+  padding: 35px 28px;
+  transition: .4s;
+  backdrop-filter: blur(18px);
+}
+
+.degree-card::before {
+  content: '';
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top right,
+      rgba(99, 71, 246, .12),
+      transparent 60%);
+  opacity: 0;
+  transition: .4s;
+}
+
+.degree-card:hover {
+  transform: translateY(-12px);
+  border-color: #6347f6;
+  box-shadow: 0 25px 60px rgba(99, 71, 246, .18);
+}
+
+.degree-card:hover::before {
+  opacity: 1;
+}
+
+.degree-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+  background: linear-gradient(135deg, #6347f6, #8d7bff);
+  margin-bottom: 22px;
+  transition: .4s;
+}
+
+.degree-card:hover .degree-icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.degree-card h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.degree-card p {
+  color: var(--tx2);
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.degree-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.degree-card ul li {
+  margin-bottom: 12px;
+  color: var(--tx2);
+  display: flex;
+  align-items: center;
+}
+
+.degree-card ul li::before {
+  content: "✓";
+  color: #6347f6;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.degree-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #6347f6;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .35s;
+}
+
+.degree-btn i {
+  transition: .35s;
+}
+
+.degree-btn:hover {
+  color: #4028d6;
+}
+
+.degree-btn:hover i {
+  transform: translateX(6px);
+}
+
+
+/*==============================
+    DEGREE BENEFITS
+==============================*/
+
+#degree-benefits {
+  position: relative;
+  overflow: hidden;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.benefit-card {
+  background: var(--sf);
+  border: 1px solid var(--bd);
+  border-radius: 20px;
+  padding: 35px 28px;
+  text-align: center;
+  transition: .35s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+}
+
+.benefit-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      rgba(122, 106, 216, .12),
+      transparent 70%);
+  opacity: 0;
+  transition: .35s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  border-color: #7a6ad8;
+  box-shadow: 0 20px 40px rgba(122, 106, 216, .15);
+}
+
+.benefit-card:hover::before {
+  opacity: 1;
+}
+
+.benefit-card i {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
+  color: #fff;
+  background: linear-gradient(135deg, #7a6ad8, #9b8cff);
+  transition: .35s;
+}
+
+.benefit-card:hover i {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.benefit-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--tx);
+}
+
+.benefit-card p {
+  color: var(--tx2);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Mobile */
+
+@media(max-width:768px) {
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card {
+    padding: 30px 22px;
+  }
+
 }
