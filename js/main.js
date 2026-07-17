@@ -49,8 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*  THEME  */
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+    isDark = true;
+} else {
+    isDark = false;
+}
 function toggleTheme() {
     isDark = !isDark;
+    localStorage.setItem("theme", isDark ? "dark" : "light");
     document.getElementById('htmlRoot').classList.toggle('lm', !isDark);
     // Landing icons
     const si = document.getElementById('suni'),
@@ -73,6 +81,17 @@ function toggleTheme() {
     updateChartColors();
 }
 document.getElementById('thbtn').addEventListener('click', toggleTheme);
+window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("htmlRoot").classList.toggle("lm", !isDark);
+
+    const si = document.getElementById("suni");
+    const mi = document.getElementById("mooni");
+
+    if (si && mi) {
+        si.style.display = isDark ? "none" : "inline";
+        mi.style.display = isDark ? "inline" : "none";
+    }
+});
 
 /*  NAVBAR  */
 window.addEventListener('scroll', () => document.getElementById('nbar').classList.toggle('scr', scrollY > 40));
