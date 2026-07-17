@@ -20,6 +20,8 @@
    <link rel="stylesheet" href="css/all.min.css" />
    <!-- magnific CSS -->
    <link rel="stylesheet" href="css/magnific-popup.css" />
+   <!--chatbotcss-->
+   <link rel="stylesheet" href="css/chatbot.css"/>
    <!-- Style CSS -->
    <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -141,7 +143,7 @@
                            <span class="ftag">
                               SSC Level
                            </span>
-                           <a href="#details1" class="btn btn-primary rounded-pill px-4">
+                           <a href="#details1" class="btn btn-primary rounded-pill ">
                               Coming Soon..
                            </a>
                         </div>
@@ -167,7 +169,7 @@
                            <span class="ftag">
                               Intermediate
                            </span>
-                           <a href="#details2" class="btn btn-primary rounded-pill px-4">
+                           <a href="#details2" class="btn btn-primary rounded-pill ">
                               Coming Soon..
                            </a>
                         </div>
@@ -194,7 +196,7 @@
                            <span class="ftag">
                               Degree
                            </span>
-                           <a href="/templates/degree.html" class="btn btn-primary rounded-pill px-4">
+                           <a href="/templates/degree.html" class="btn btn-primary rounded-pill ">
                               View Details
                            </a>
                         </div>
@@ -724,43 +726,64 @@
       </section>
 
       <!-- HOW IT WORKS -->
-      <section id="how" class="sp">
-         <div class="container">
-            <div class="text-center mb-5 rv">
-               <span class="slbl">How It Works</span>
-               <h2 class="stitle">Up and running in <span class="gt">3 simple steps</span></h2>
-            </div>
-            <div class="row g-4">
-               <div class="col-md-4 rv">
-                  <div class="gc p-4 h-100 text-center">
-                     <div class="hnum">1</div>
-                     <h3 class="fs-5 fw-semibold mb-2">Register</h3>
-                     <p style="font-size:.875rem;color:var(--tx2)">Welcome! Register now to participate in our
-                        merit-based examination and unlock your opportunity to earn a scholarship. By registering, you
-                        take the first step toward testing your academic potential and qualifying for financial support.
-                     </p>
-                  </div>
-               </div>
-               <div class="col-md-4 rv" style="transition-delay:.1s">
-                  <div class="gc p-4 h-100 text-center">
-                     <div class="hnum">2</div>
-                     <h3 class="fs-5 fw-semibold mb-2">Take Exam</h3>
-                     <p style="font-size:.875rem;color:var(--tx2)">This examination is designed to evaluate your subject
-                        knowledge, time management skills, and accuracy under competitive conditions.</p>
-                  </div>
-               </div>
-               <div class="col-md-4 rv" style="transition-delay:.2s">
-                  <div class="gc p-4 h-100 text-center">
-                     <div class="hnum">3</div>
-                     <h3 class="fs-5 fw-semibold mb-2">Get Scholarship</h3>
-                     <p style="font-size:.875rem;color:var(--tx2)">We believe in recognizing and rewarding academic
-                        excellence. Students who score above the qualifying cut-off marks in our examination will be
-                        eligible for merit-based scholarships.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
+           
+<div class="how-it-works">
+  <span class="badge">HOW IT WORKS</span>
+  <h2>Your Journey to Success in <span>3 Simple Steps</span></h2>
+  <p class="subtitle">Achievo makes scholarship preparation and application simple, transparent and effective.</p>
+
+  <div class="steps">
+
+    <!-- Step 1 -->
+    <div class="step-row offset-1" data-step="1">
+      <div class="step-num">01</div>
+      <div class="card">
+        <div class="icon-box">👤+</div>
+        <h3>Create Your Account</h3>
+        <p>Sign up with your details and create your profile in just a few minutes.</p>
+      </div>
+    </div>
+
+    <div class="connector c1">
+      <div class="bolt" id="bolt1">⚡</div>
+      <svg width="200" height="110" viewBox="0 0 200 110">
+        <path id="path1" d="M30 0 V70 Q30 90 55 90 H150" stroke="#ff6a1a" stroke-width="2.5" stroke-dasharray="2,8" stroke-linecap="round" fill="none"/>
+        <polygon id="arrow1" points="145,82 165,90 145,98" fill="#ff6a1a"/>
+      </svg>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-row offset-2" data-step="2">
+      <div class="step-num">02</div>
+      <div class="card">
+        <div class="icon-box">🔍</div>
+        <h3>Find & Apply</h3>
+        <p>Discover scholarships that match your profile and apply with ease.</p>
+      </div>
+    </div>
+
+    <div class="connector c2">
+      <div class="bolt" id="bolt2">⚡</div>
+      <svg width="200" height="110" viewBox="0 0 200 110">
+        <path id="path2" d="M30 0 V70 Q30 90 55 90 H150" stroke="#ff6a1a" stroke-width="2.5" stroke-dasharray="2,8" stroke-linecap="round" fill="none"/>
+        <polygon id="arrow2" points="145,82 165,90 145,98" fill="#ff6a1a"/>
+      </svg>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-row offset-3" data-step="3">
+      <div class="step-num">03</div>
+      <div class="card">
+        <div class="icon-box">🏆</div>
+        <h3>Get Scholarship</h3>
+        <p>Track your applications and get the scholarship you deserve.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
 
       <!-- GALLERY -->
       <section id="gallery" class="sp" style="background:var(--bg2)">
@@ -1460,6 +1483,25 @@
    </div>
    <!-- /landing -->
 
+   <!--chatbot-->
+<div id="chat-icon" class="chat-icon">
+    <img src="/assets/img/chat.png" alt="Chatbot">
+</div>
+
+<div id="chat-box" class="chat-box">
+
+    <div class="chat-header">
+
+        <span>🎓 Scholarship Assistant</span>
+
+        <span id="close-chat" class="close-btn">&times;</span>
+
+    </div>
+
+    <div id="chat-body" class="chat-body"></div>
+
+</div>
+
 
    <!-- ======================== SCRIPTS ======================== -->
    <!-- jQuery -->
@@ -1470,10 +1512,17 @@
    <script src="js/aos.js"></script>
    <!-- Swiper -->
    <script src="js/chart.umd.min.js"></script>
+   <!--datachatbot-->
+   <script src="js/datachatbot.js"></script>
+   <!--chat bot-->
+   <script src="js/chatbot.js"></script>
    <!-- CounterUp -->
    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
    <!-- Main js -->
    <script src="js/main.js"></script>
+   <script src="js/how-it-works.js"></script>
 
 </body>
 
