@@ -21,7 +21,7 @@
    <!-- magnific CSS -->
    <link rel="stylesheet" href="css/magnific-popup.css" />
    <!--chatbotcss-->
-   <link rel="stylesheet" href="css/chatbot.css"/>
+   <link rel="stylesheet" href="css/chatbot.css" />
    <!-- Style CSS -->
    <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -82,9 +82,9 @@
             style="border-color:var(--bd)!important">Contact</a>
          <a href="#faq" class="nav-link d-block py-3">FAQ</a>
          <div class="d-flex gap-2 mt-3">
-            <a href="register2.html" class="bgrd btn px-3 py-2 d-none d-sm-flex align-items-center gap-1">
-               Register <i class="fa-solid fa-arrow-right fa-sm"></i>
-            </a>
+            <button class="bgrd flex-fill py-2 btn" data-bs-toggle="offcanvas" data-bs-target="#lofc"
+               onclick="swTab('signup')">Register</button>
+
          </div>
       </div>
 
@@ -124,7 +124,7 @@
             </div>
             <div class="row g-4">
                <!-- SSC -->
-               <div class="col-lg-4 col-md-6 rv">
+               <div class="col-lg-4 col-md-4 rv">
                   <div class="gc overflow-hidden h-100">
                      <img src="assets/img/courses/ssc.jpg" alt="SSC Scholarship" class="img-fluid w-100"
                         style="height:220px;object-fit:cover;">
@@ -151,7 +151,7 @@
                   </div>
                </div>
                <!-- EAMCET -->
-               <div class="col-lg-4 col-md-6 rv" style="transition-delay:.1s;">
+               <div class="col-lg-4 col-md-4 rv" style="transition-delay:.1s;">
                   <div class="gc overflow-hidden h-100">
                      <img src="assets/img/courses/eamcet.jpg" alt="EAMCET Scholarship" class="img-fluid w-100"
                         style="height:220px;object-fit:cover;">
@@ -177,7 +177,7 @@
                   </div>
                </div>
                <!-- Degree -->
-               <div class="col-lg-4 col-md-6 rv" style="transition-delay:.2s;">
+               <div class="col-lg-4 col-md-4 rv" style="transition-delay:.2s;">
                   <div class="gc overflow-hidden h-100">
                      <img src="assets/img/courses/degree.jpg" alt="Degree Scholarship" class="img-fluid w-100"
                         style="height:220px;object-fit:cover;">
@@ -313,16 +313,11 @@
                   Helping deserving students pursue higher education through merit-based scholarships.
                </p>
             </div>
-            <!-- Hero Video -->
-            <div class="gc overflow-hidden mb-5 rv">
-               <video autoplay muted loop playsinline class="w-100">
-                  <source src="assets/img/courses/deg-vid.mp4" type="video/mp4">
-               </video>
-            </div>
+
             <div class="row g-4">
 
                <!-- Offers -->
-               <div class="col-lg-6 rv">
+               <div class="col-lg-4 col-md-6 rv">
                   <div class="gc p-4 h-100">
                      <div class="ftico">
                         <i class="fa-solid fa-gift"></i>
@@ -347,7 +342,7 @@
                </div>
 
                <!-- Aim -->
-               <div class="col-lg-6 rv">
+               <div class="col-lg-4 col-md-6 rv">
                   <div class="gc p-4 h-100">
                      <div class="ftico">
                         <i class="fa-solid fa-bullseye"></i>
@@ -368,36 +363,38 @@
                </div>
 
                <!-- Structure -->
-               <div class="col-lg-6 rv">
+               <div class="col-lg-4 col-md-6 rv">
                   <div class="gc p-4 h-100">
                      <div class="ftico">
-                        <i class="fa-solid fa-ranking-star"></i>
+                        <i class="fas fa-medal"></i>
                      </div>
                      <h3 class="fs-4 fw-bold mt-3">
                         Scholarship Structure
                      </h3>
-                     <table class="table align-middle">
-                        <thead>
-                           <tr>
-                              <th>Rank</th>
-                              <th>Scholarship</th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr>
-                              <td>1 – 5</td>
-                              <td>₹50,000</td>
-                           </tr>
-                           <tr>
-                              <td>6 – 10</td>
-                              <td>₹40,000</td>
-                           </tr>
-                           <tr>
-                              <td>11 – 100</td>
-                              <td>₹20,000</td>
-                           </tr>
-                        </tbody>
-                     </table>
+                     <div class="table-wrapper">
+                        <table class="table align-middle">
+                           <thead>
+                              <tr>
+                                 <th>Rank</th>
+                                 <th>Scholarship</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>1 – 5</td>
+                                 <td>₹50,000</td>
+                              </tr>
+                              <tr>
+                                 <td>6 – 10</td>
+                                 <td>₹40,000</td>
+                              </tr>
+                              <tr>
+                                 <td>11 – 100</td>
+                                 <td>₹20,000</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
                      <span class="ftag">
                         Merit Based
                      </span>
@@ -405,7 +402,7 @@
                </div>
 
                <!-- Benefits -->
-               <div class="col-lg-6 rv">
+               <div class="col-lg-4 col-md-6 rv">
                   <div class="gc p-4 h-100">
                      <div class="ftico">
                         <i class="fa-solid fa-award"></i>
@@ -427,7 +424,7 @@
                </div>
 
                <!-- Eligibility -->
-               <div class="col-lg-6 rv">
+               <div class="col-lg-4 col-md-6 rv">
                   <div class="gc p-4 h-100">
                      <div class="ftico">
                         <i class="fa-solid fa-user-check"></i>
@@ -448,7 +445,7 @@
                </div>
 
                <!-- Exam -->
-               <div class="col-lg-6 rv">
+               <div class="col-lg-4 col-md-6 rv">
                   <div class="gc p-4 h-100">
                      <div class="ftico">
                         <i class="fa-solid fa-file-pen"></i>
@@ -461,7 +458,6 @@
                      </h2>
                      <p>100 Marks</p>
                      <p>Duration : 90 Minutes</p>
-                     <p>Subjects : Aptitude, English & GK</p>
                      <p>MCQ Based Examination</p>
                      <span class="ftag">
                         Scholarship Test
@@ -499,6 +495,7 @@
 
                <!-- TOP STUDENTS -->
                <div class="container">
+                  <br>
 
                   <div class="text-center mb-5 reveal">
                      <span class="tag">Student Rankings</span>
@@ -511,7 +508,7 @@
                   </div>
 
                   <div class="glass-card reveal">
-                     <div class="table-responsive">
+                     <div class="table-wrapper">
                         <table class="table table-hover align-middle mb-0">
                            <thead>
                               <tr style="border-bottom:2px solid var(--bd);">
@@ -726,64 +723,64 @@
       </section>
 
       <!-- HOW IT WORKS -->
-           
-<div class="how-it-works">
-  <span class="badge">HOW IT WORKS</span>
-  <h2>Your Journey to Success in <span>3 Simple Steps</span></h2>
-  <p class="subtitle">Achievo makes scholarship preparation and application simple, transparent and effective.</p>
+      <div class="how-it-works">
+         <span class="badge">HOW IT WORKS</span>
+         <h2>Your Journey to Success in <span>3 Simple Steps</span></h2>
+         <p class="subtitle">Achievo makes scholarship preparation and application simple, transparent and effective.
+         </p>
 
-  <div class="steps">
+         <div class="steps">
 
-    <!-- Step 1 -->
-    <div class="step-row offset-1" data-step="1">
-      <div class="step-num">01</div>
-      <div class="card">
-        <div class="icon-box">👤+</div>
-        <h3>Create Your Account</h3>
-        <p>Sign up with your details and create your profile in just a few minutes.</p>
+            <!-- Step 1 -->
+            <div class="step-row offset-1" data-step="1">
+               <div class="step-num">01</div>
+               <div class="card">
+                  <div class="icon-box">👤+</div>
+                  <h3>Create Your Account</h3>
+                  <p>Sign up with your details and create your profile in just a few minutes.</p>
+               </div>
+            </div>
+
+            <div class="connector c1">
+               <div class="bolt" id="bolt1">⚡</div>
+               <svg width="200" height="110" viewBox="0 0 200 110">
+                  <path id="path1" d="M30 0 V70 Q30 90 55 90 H150" stroke="#ff6a1a" stroke-width="2.5"
+                     stroke-dasharray="2,8" stroke-linecap="round" fill="none" />
+                  <polygon id="arrow1" points="145,82 165,90 145,98" fill="#ff6a1a" />
+               </svg>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-row offset-2" data-step="2">
+               <div class="step-num">02</div>
+               <div class="card">
+                  <div class="icon-box">🔍</div>
+                  <h3>Find & Apply</h3>
+                  <p>Discover scholarships that match your profile and apply with ease.</p>
+               </div>
+            </div>
+
+            <div class="connector c2">
+               <div class="bolt" id="bolt2">⚡</div>
+               <svg width="200" height="110" viewBox="0 0 200 110">
+                  <path id="path2" d="M30 0 V70 Q30 90 55 90 H150" stroke="#ff6a1a" stroke-width="2.5"
+                     stroke-dasharray="2,8" stroke-linecap="round" fill="none" />
+                  <polygon id="arrow2" points="145,82 165,90 145,98" fill="#ff6a1a" />
+               </svg>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-row offset-3" data-step="3">
+               <div class="step-num">03</div>
+               <div class="card">
+                  <div class="icon-box">🏆</div>
+                  <h3>Get Scholarship</h3>
+                  <p>Track your applications and get the scholarship you deserve.</p>
+               </div>
+            </div>
+
+         </div>
       </div>
-    </div>
-
-    <div class="connector c1">
-      <div class="bolt" id="bolt1">⚡</div>
-      <svg width="200" height="110" viewBox="0 0 200 110">
-        <path id="path1" d="M30 0 V70 Q30 90 55 90 H150" stroke="#ff6a1a" stroke-width="2.5" stroke-dasharray="2,8" stroke-linecap="round" fill="none"/>
-        <polygon id="arrow1" points="145,82 165,90 145,98" fill="#ff6a1a"/>
-      </svg>
-    </div>
-
-    <!-- Step 2 -->
-    <div class="step-row offset-2" data-step="2">
-      <div class="step-num">02</div>
-      <div class="card">
-        <div class="icon-box">🔍</div>
-        <h3>Find & Apply</h3>
-        <p>Discover scholarships that match your profile and apply with ease.</p>
-      </div>
-    </div>
-
-    <div class="connector c2">
-      <div class="bolt" id="bolt2">⚡</div>
-      <svg width="200" height="110" viewBox="0 0 200 110">
-        <path id="path2" d="M30 0 V70 Q30 90 55 90 H150" stroke="#ff6a1a" stroke-width="2.5" stroke-dasharray="2,8" stroke-linecap="round" fill="none"/>
-        <polygon id="arrow2" points="145,82 165,90 145,98" fill="#ff6a1a"/>
-      </svg>
-    </div>
-
-    <!-- Step 3 -->
-    <div class="step-row offset-3" data-step="3">
-      <div class="step-num">03</div>
-      <div class="card">
-        <div class="icon-box">🏆</div>
-        <h3>Get Scholarship</h3>
-        <p>Track your applications and get the scholarship you deserve.</p>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
 
       <!-- GALLERY -->
       <section id="gallery" class="sp" style="background:var(--bg2)">
@@ -1484,23 +1481,16 @@
    <!-- /landing -->
 
    <!--chatbot-->
-<div id="chat-icon" class="chat-icon">
-    <img src="/assets/img/chat.png" alt="Chatbot">
-</div>
-
-<div id="chat-box" class="chat-box">
-
-    <div class="chat-header">
-
-        <span>🎓 Scholarship Assistant</span>
-
-        <span id="close-chat" class="close-btn">&times;</span>
-
-    </div>
-
-    <div id="chat-body" class="chat-body"></div>
-
-</div>
+   <div id="chat-icon" class="chat-icon">
+      <img src="/assets/img/chat.png" alt="Chatbot">
+   </div>
+   <div id="chat-box" class="chat-box">
+      <div class="chat-header">
+         <span>🎓 Scholarship Assistant</span>
+         <span id="close-chat" class="close-btn">&times;</span>
+      </div>
+      <div id="chat-body" class="chat-body"></div>
+   </div>
 
 
    <!-- ======================== SCRIPTS ======================== -->
@@ -1518,7 +1508,7 @@
    <script src="js/chatbot.js"></script>
    <!-- CounterUp -->
    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
    <!-- Main js -->
    <script src="js/main.js"></script>
