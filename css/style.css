@@ -366,13 +366,21 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background:
-    /* linear-gradient(rgba(127, 147, 202, 0.75), rgba(7,10,18,.85)), */
-    url("/assets/img/hero_bg.png") center/cover no-repeat;
+}
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  z-index: -3;
+}
+
+.hero-bg.active {
+  opacity: 1;
 }
 
 .hbadge {
@@ -1020,7 +1028,7 @@ a {
 #foot {
   background: var(--main);
   border-top: 1px solid var(--bd);
-  padding: 60px 0 30px;
+  padding: 100px 0 30px;
 }
 
 #foot .row:first-child {
@@ -1127,4 +1135,3 @@ a {
     gap: 18px;
   }
 }
-
